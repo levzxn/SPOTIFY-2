@@ -78,18 +78,30 @@ li{
     overflow-y: auto;
 }
 
+.container_lateral.container2::-webkit-scrollbar {
+    width: 3px;
+    z-index: -1;
+
+  }
+.container_lateral.container2::-webkit-scrollbar-thumb {
+    border-radius: 40px;
+    border: 3px solid black;  
+    z-index: -1;
+  }
+
 .container_header.lateral{
     display: flex;
     flex-direction:row;
     justify-content: space-between;
     height: 10vh;
     width:100vw;
-    max-width: 95.5%;
+    max-width: 94.6%;
     position: absolute;
     flex-wrap: wrap;
     background-color: 	#121212;
-    border-radius: 3px;
+    border-radius: 6px;
     padding-bottom: 10px;
+
 }
 
 .header.lateral{
@@ -99,7 +111,6 @@ li{
     height: 40%;
     width:100%;
     padding:10px;
-    padding-top: 20px;
 }
 
 .biblioteca{
@@ -112,7 +123,7 @@ li{
 }
 
 .botoes_header{
-    padding-top: 6px;
+    padding-top: 11px;
     padding-right: 20px;
 }
 
@@ -176,7 +187,7 @@ li{
 .descricao_musica{
     font-size: 10px;
     padding: 2px;
-    padding-left: 13px;
+    padding-left: 12px;
 }
 
 .perfil_artista{
