@@ -187,7 +187,7 @@ li{
 
 .footer{
     background-color:white;
-    height: 11vh;
+    height: 10vh;
     width: 100vw;
     display: flex;
     flex-direction:row-reverse;
