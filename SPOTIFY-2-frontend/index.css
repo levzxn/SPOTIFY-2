@@ -12,10 +12,7 @@ body{
     background-color: black;
     height: 100vh;
     width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-self: center;
+    padding: 10px;
 }
 ul{
     list-style: none;
@@ -39,8 +36,6 @@ li{
     justify-content: space-between;
     flex-wrap: wrap;
     border-radius: 5px;
-    padding: 10px;
-    position: fixed;
 }
 
 .container_lateral.container1{
@@ -158,7 +153,6 @@ li{
 .imagem.album1{
     width:55px;
     height:55px;
-    border-radius: 5px;
 }
 
 .titulo_musica{
@@ -168,32 +162,4 @@ li{
 
 .descricao_musica{
     font-size: 10px;
-    padding: 2px;
-    padding-left: 13px;
-}
-
-.perfil_artista{
-    background-color: #121212;
-    height: 800px;
-    width: 70vw;
-    display: flex;
-    flex-direction:row-reverse;
-    justify-self: center;
-    flex-wrap: wrap;
-    border-radius: 5px;
-    margin:10px;
-    margin-top: 0;
-}
-
-.footer{
-    background-color:white;
-    height: 10vh;
-    width: 100vw;
-    display: flex;
-    flex-direction:row-reverse;
-    bottom: 0;
-    flex-wrap: wrap;
-    margin:0px;
-    margin-top: 0;
-    position: fixed;
 }
