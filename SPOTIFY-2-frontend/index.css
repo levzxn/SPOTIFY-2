@@ -15,7 +15,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-self: center;
 }
 ul{
     list-style: none;
@@ -40,7 +39,7 @@ li{
     flex-wrap: wrap;
     /* border-radius: 5px; */
     padding: 10px;
-    position: fixed;
+    position: relative;
 }
 
 .container_lateral.container1{
@@ -183,14 +182,68 @@ li{
 .perfil_artista{
     background-color: #121212;
     height: 800px;
+    min-height: 70vh;
     width: 70vw;
+    min-width: 70vw;
     display: flex;
     flex-direction:row-reverse;
-    justify-self: center;
     flex-wrap: wrap;
     border-radius: 5px;
-    margin:10px;
-    margin-top: 0;
+    margin-top: 10px;
+    z-index: -1;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    z-index: 0;
+}
+
+.banner_imagem {
+    width:500px;
+    height:200px ;
+    border-radius: 5px;
+    position: fixed;
+
+}
+
+.itens_banner {
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content:start;
+}
+
+.nome_artista {
+    margin: 0;
+    font-size: 5rem;
+    color: white;
+}
+
+.container_verificado {
+    display: flex;
+    align-items: center;
+}
+
+.icone_verificado {
+    width: 24px;
+    height: 24px;
+    fill: blue;
+    margin-right: 5px;
+}
+
+.texto_verificado {
+    font-size: 15px;
+    color: white;
+}
+
+.sugestoes.container_populares{
+    display: flex;
+
 }
 
 .footer{
