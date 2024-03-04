@@ -246,6 +246,36 @@ li{
 
 }
 
+.menu_central{
+    background-color: black;
+    display: flex;
+    width: 76.5%;
+    height: 90vh;
+    flex-wrap: wrap;
+    padding: 10px;
+    padding-left: 0px;
+}
+
+.menu_central_principal{
+    background-color:  #121212;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.menu_central_header{
+    display: flex;
+    height: 64px;
+    width: 100%;
+    padding: 16px;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.botoes_header_central{
+    display: flex;
+}   
+
 .footer{
     background-color:white;
     height: 11vh;
