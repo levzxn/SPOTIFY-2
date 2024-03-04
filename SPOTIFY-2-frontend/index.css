@@ -80,8 +80,9 @@ li{
 
 .container_header.lateral{
     display: flex;
+    flex-direction:row;
     justify-content: space-between;
-    height: 12%;
+    height: 18%;
     width:100%;
     max-width: 95.5%;
     position: absolute;
@@ -93,6 +94,7 @@ li{
 
 .header.lateral{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     height: 40%;
     width:100%;
