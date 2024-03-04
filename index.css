@@ -13,6 +13,10 @@ body{
     height: 100vh;
     width: 100vw;
     padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-self: center;
 }
 ul{
     list-style: none;
@@ -36,6 +40,7 @@ li{
     justify-content: space-between;
     flex-wrap: wrap;
     border-radius: 5px;
+    
 }
 
 .container_lateral.container1{
@@ -69,6 +74,8 @@ li{
     height: 80%;
     width:100%;
     border-radius: 6px;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .container_header.lateral{
@@ -76,6 +83,7 @@ li{
     justify-content: space-between;
     height: 12%;
     width:100%;
+    flex-wrap: wrap;
 }
 
 .header.lateral{
@@ -92,11 +100,97 @@ li{
     gap: 15px;
     align-items: flex-end;
     flex-direction: row;
-    justify-self: center;
     padding-left: 15px;
     margin: 7px;
 }
 
 .botoes_header{
-    padding: 5px;
+    padding-top: 6px;
+    padding-right: 20px;
+}
+
+.filtros_pesquisa{
+    display: flex;
+}
+
+.filtros_pesquisa_botoes{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+.botao{
+    height: 30px;
+    width: 80px;
+    margin-right: 20px;
+    border-radius: 20px;
+    background-color: #252323;
+
+}
+
+.sugestoes.container_lateral{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.lista_lateral.lista2{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 7px;
+}
+
+.musica{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.container_musica{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.imagem.album1{
+    width:55px;
+    height:55px;
+}
+
+.titulo_musica{
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.descricao_musica{
+    font-size: 10px;
+}
+
+.perfil_artista{
+    background-color: #121212;
+    height: 800px;
+    width: 70vw;
+    display: flex;
+    flex-direction:row-reverse;
+    justify-self: center;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    margin:10px;
+    margin-top: 0;
+}
+
+.footer{
+    background-color:black;
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    flex-direction:row-reverse;
+    bottom: 0;
+    flex-wrap: wrap;
+    margin:0px;
+    margin-top: 0;
+    position: fixed;
 }
