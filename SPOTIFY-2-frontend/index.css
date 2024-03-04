@@ -179,43 +179,39 @@ li{
     padding-left: 12px;
 }
 
-.perfil_artista{
-    background-color: #121212;
-    height: 800px;
-    min-height: 70vh;
-    width: 70vw;
-    min-width: 70vw;
+.menu_central{
+    background-color: black;
     display: flex;
-    flex-direction:row-reverse;
+    width: 67vw;
+    height: 90vh;
     flex-wrap: wrap;
+    padding: 10px;
+    padding-left: 0px;
+}
+
+.perfil_artista{
+    background-color:  #121212;
+    width: 100%;
+    height: 100%;
     border-radius: 5px;
-    margin-top: 10px;
-    z-index: -1;
 }
 
 .banner {
-    position: relative;
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: start;
-    z-index: 0;
+    align-items: center;
+    padding:15px ;
+    background-image:url('imagens/banner-kanye.jpeg');
+    background-size: cover;
+    background-position: center;
 }
 
-.banner_imagem {
-    width:500px;
-    height:200px ;
-    border-radius: 5px;
-    position: fixed;
-
-}
 
 .itens_banner {
     display: flex;
-    z-index: 1;
     flex-direction: column;
-    align-items: center;
-    justify-content:start;
+    align-items:flex-start;
+    justify-content:flex-start;
 }
 
 .nome_artista {
@@ -235,8 +231,7 @@ li{
     fill: blue;
     margin-right: 5px;
 }
-
-.texto_verificado {
+.texto.itens_banner{
     font-size: 15px;
     color: white;
 }
