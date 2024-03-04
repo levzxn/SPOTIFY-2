@@ -132,13 +132,21 @@ li{
     padding-top: 5px;
 }
 
-.botao{
+.botao.largo{
     height: 30px;
     width: 80px;
     margin-right: 20px;
     border-radius: 20px;
     background-color: #252323;
 
+}
+
+.botao.pequeno{
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+    border-radius: 30px;
+    background-color: #252323;
 }
 
 .sugestoes.container_lateral{
@@ -179,68 +187,6 @@ li{
     padding-left: 12px;
 }
 
-.menu_central{
-    background-color: black;
-    display: flex;
-    width: 67vw;
-    height: 90vh;
-    flex-wrap: wrap;
-    padding: 10px;
-    padding-left: 0px;
-}
-
-.perfil_artista{
-    background-color:  #121212;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-}
-
-.banner {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding:15px ;
-    background-image:url('imagens/banner-kanye.jpeg');
-    background-size: cover;
-    background-position: center;
-}
-
-
-.itens_banner {
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    justify-content:flex-start;
-}
-
-.nome_artista {
-    margin: 0;
-    font-size: 5rem;
-    color: white;
-}
-
-.container_verificado {
-    display: flex;
-    align-items: center;
-}
-
-.icone_verificado {
-    width: 24px;
-    height: 24px;
-    fill: blue;
-    margin-right: 5px;
-}
-.texto.itens_banner{
-    font-size: 15px;
-    color: white;
-}
-
-.sugestoes.container_populares{
-    display: flex;
-
-}
-
 .footer{
     background-color:white;
     height: 11vh;
@@ -252,4 +198,34 @@ li{
     margin:0px;
     margin-top: 0;
     position: fixed;
+}
+
+.menu_central{
+    background-color: black;
+    display: flex;
+    width: 76.5%;
+    height: 90vh;
+    flex-wrap: wrap;
+    padding: 10px;
+    padding-left: 0px;
+}
+
+.menu_central_principal{
+    background-color:  #121212;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.menu_central_header{
+    display: flex;
+    height: 64px;
+    width: 100%;
+    padding: 16px;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.botoes_header_central{
+    display: flex;
 }
