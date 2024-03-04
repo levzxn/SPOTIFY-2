@@ -74,8 +74,8 @@ li{
     height: 80%;
     width:100%;
     border-radius: 6px;
-    flex-wrap: wrap;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 .container_header.lateral{
@@ -83,7 +83,12 @@ li{
     justify-content: space-between;
     height: 12%;
     width:100%;
+    max-width: 95.5%;
+    position: absolute;
     flex-wrap: wrap;
+    background-color: 	#121212;
+    border-radius: 3px;
+    padding-bottom: 10px;
 }
 
 .header.lateral{
