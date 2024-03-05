@@ -198,9 +198,8 @@ li{
     height: 40%;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
     background-image: url(imagens/banner-kanye.jpeg);
-    background-size: cover;
+    background-size:cover;
     background-position: center;
     max-height: 40%;
 }
@@ -250,6 +249,15 @@ li{
     color: white;
 }
 
+.menu_botoes{
+    width: ;
+    height: ;
+}
+
+.botao_play{
+    
+}
+
 .menu_maisOuvidas{
     width: 100%;
     flex-direction: column;
@@ -257,11 +265,16 @@ li{
     background: linear-gradient(0deg, rgba(0,0,0,1) 46%, rgba(8,109,18,1) 80%, rgba(12,255,102,1) 100%);
 }
 
+.container_texto_maisOuvidas{
+    padding: 20px;
+}
+
 .titulo_maisOuvidas{
     width: 100%;
     font-size: 30px;
     padding-top: 20px;
     padding-bottom:0;
+    color: white;
 }
 
 
