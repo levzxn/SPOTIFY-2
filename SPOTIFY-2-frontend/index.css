@@ -10,12 +10,14 @@
 
 body{
     background-color: black;
+}
+
+.container_principal{
     height: 100vh;
     width: 100vw;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
 }
+
 ul{
     list-style: none;
 }
@@ -189,7 +191,7 @@ li{
 .perfil_artista{
     background-color: #121212;
     height: 100%;
-    width: 70vw;
+    width: 100%;
     min-width: 70vw;
     overflow-y: auto;
     border-radius: 5px;
@@ -200,14 +202,10 @@ li{
     height: 40%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
     align-items: flex-end;
-    padding: 10px;
     background-image: url(imagens/banner-kanye.jpeg);
     background-size: cover;
     background-position: center;
-    gap:40px ;
 }
 
 .texto_banner{
@@ -217,14 +215,13 @@ li{
     align-items: flex-start;
 }
 
-.container_logo{
-    width: 150px;
-    height: 150px;
+.itens_banner{
+    display: flex;
 }
 
 .icone_artista{
-    width:100%;
-    height: 100%;
+    width: 150px;
+    height: 150px;
     overflow: hidden;
     border-radius: 50%;
 }
@@ -237,7 +234,8 @@ li{
 
 .container_verificado {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
 .icone_verificado {
@@ -262,7 +260,7 @@ li{
 .titulo_maisOuvidas{
     width: 100%;
     font-size: 30px;
-    padding: 30px;
+    padding-top: 20px;
     padding-bottom:0;
 }
 
@@ -306,7 +304,7 @@ li{
 .menu_central{
     background-color: black;
     display: flex;
-    width: 76.5%;
+    width: 100vw;
     height: 90vh;
     flex-wrap: wrap;
     padding: 10px;
