@@ -149,10 +149,6 @@ li{
 }
 
 .sugestoes.container_lateral{
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* justify-content: space-between; */
-    /* flex-direction: column; */
     padding-top: 90px;
 }
 
