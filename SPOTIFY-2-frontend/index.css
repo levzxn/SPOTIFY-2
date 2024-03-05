@@ -132,13 +132,20 @@ li{
     padding-top: 5px;
 }
 
-.botao{
+.botao.largo{
     height: 30px;
     width: 80px;
     margin-right: 20px;
     border-radius: 20px;
     background-color: #252323;
 
+}
+
+.botao.pequeno{
+    height: 30px;
+    width: 30px;
+    background-color: #252323;
+    border-radius: 30px;
 }
 
 .sugestoes.container_lateral{
@@ -274,6 +281,7 @@ li{
 
 .botoes_header_central{
     display: flex;
+    gap: 10px;
 }   
 
 .footer{
