@@ -202,6 +202,7 @@ li{
     background-image: url(imagens/banner-kanye.jpeg);
     background-size: cover;
     background-position: center;
+    max-height: 40%;
 }
 
 .texto_banner{
@@ -209,10 +210,13 @@ li{
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    vertical-align: baseline;
 }
 
 .itens_banner{
     display: flex;
+    align-items: center;
+    padding: 5px;
 }
 
 .icone_artista{
@@ -231,7 +235,7 @@ li{
 .container_verificado {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .icone_verificado {
