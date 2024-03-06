@@ -5,7 +5,7 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 100;
     font-size: 15px;
-    color: #b3b3b3;
+    color: white;
 }
 
 body{
@@ -250,12 +250,35 @@ li{
 }
 
 .menu_botoes{
-    width: ;
-    height: ;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
 }
 
-.botao_play{
-    
+.botao_maisOuvidas{
+    flex-direction: row;
+    margin: 15px;
+
+}
+
+.botao_maisOuvidas.play{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.botao_maisOuvidas.seguindo{
+    width: 100px;
+    height: 30px;
+    border-radius:20px ;
+    border-color: white;
+    border:2px solid;
+    background-color: transparent;
+}
+
+.botao_maisOuvidas.mais_opcoes{
+    background-color: transparent;
 }
 
 .menu_maisOuvidas{
