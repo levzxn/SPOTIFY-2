@@ -406,6 +406,7 @@ li{
     padding: 16px;
     justify-content: space-between;
     box-sizing: border-box;
+    position: fixed;
 }
 
 .botoes_header_central{
