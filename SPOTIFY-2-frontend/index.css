@@ -220,12 +220,9 @@ li{
   }
 
 .texto_banner{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    vertical-align: baseline;
     padding: 10px;
+    overflow: hidden;
+    min-width: 600px;
     overflow: hidden;
 }
 
@@ -241,6 +238,7 @@ li{
     max-width: 250px;
     height: 25vh;
     max-height: 250px;
+    overflow: hidden;
 }
 
 .imagem_icone_artista{
@@ -255,6 +253,7 @@ li{
     margin: 0;
     font-size: 6rem;
     color: white;
+    overflow: hidden;
 }
 
 .container_verificado {
