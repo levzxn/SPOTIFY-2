@@ -136,7 +136,7 @@ li{
 
 .botao.largo{
     height: 30px;
-    width: 80px;
+    width: 85px;
     margin-right: 20px;
     border-radius: 20px;
     background-color: #252323;
@@ -148,6 +148,7 @@ li{
     width: 30px;
     background-color: #252323;
     border-radius: 30px;
+    padding: 7px;
 }
 
 .sugestoes.container_lateral{
@@ -235,7 +236,6 @@ li{
 }
 
 .icone_artista{
-    overflow: hidden;
     padding: 10px;
     width: 80%;
     max-width: 250px;
@@ -248,7 +248,7 @@ li{
     height: auto; /* altura automática para manter a proporção da imagem */
     display: block; /* para remover o espaço extra sob a imagem */
     border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .nome_artista {
@@ -364,7 +364,7 @@ li{
 }
 
 .texto_padrao{
-    min-width: 100px;
+    min-width: 150px;
     color: white;
 }
 
