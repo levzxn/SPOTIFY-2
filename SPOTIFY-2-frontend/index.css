@@ -5,7 +5,7 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 100;
     font-size: 15px;
-    color: white;
+    color: #b3b3b3;
 }
 
 body{
@@ -96,11 +96,11 @@ li{
     /* justify-content: space-between; */
     /* height: 10vh; */
     /* width: 100vw; */
-    max-width: 94.6%;
+    max-width: 94.4%;
     position: absolute;
     /* flex-wrap: wrap; */
     background-color: #121212;
-    border-radius: 6px;
+    border-radius: 6px 6px 0 0;
     padding-bottom: 10px;
 }
 
@@ -176,17 +176,19 @@ li{
 .titulo_musica{
     font-size: 18px;
     margin-left: 10px;
+    color: white;
 }
 
 .descricao_musica{
     font-size: 10px;
     padding: 2px;
     padding-left: 12px;
+    color: white;
 }
 
 .perfil_artista{
     background-color: #121212;
-    height: 100%;
+    height: 97.5%;
     width: 100%;
     min-width: 70vw;
     overflow-y: auto;
@@ -198,11 +200,23 @@ li{
     height: 40%;
     display: flex;
     flex-wrap: wrap;
-    background-image: url(imagens/banner-kanye.jpeg);
+    background-image: url(./imagens/banner-kanye2.jpg);
     background-size:cover;
     background-position: center;
     max-height: 40%;
+    border-radius: 5px 5px 0 0;
 }
+
+.perfil_artista::-webkit-scrollbar {
+    width: 3px;
+    z-index: -1;
+
+  }
+.perfil_artista::-webkit-scrollbar-thumb {
+    border-radius: 40px;
+    border: 3px solid black;  
+    z-index: -1;
+  }
 
 .texto_banner{
     display: flex;
@@ -210,6 +224,8 @@ li{
     justify-content: flex-start;
     align-items: flex-start;
     vertical-align: baseline;
+    padding: 10px;
+    overflow: hidden;
 }
 
 .itens_banner{
@@ -219,10 +235,20 @@ li{
 }
 
 .icone_artista{
-    width: 150px;
-    height: 150px;
     overflow: hidden;
+    padding: 10px;
+    width: 80%;
+    max-width: 250px;
+    height: 25vh;
+    max-height: 250px;
+}
+
+.imagem_icone_artista{
+    width: 100%; /* garantir que a imagem ocupe toda a largura da div */
+    height: auto; /* altura automática para manter a proporção da imagem */
+    display: block; /* para remover o espaço extra sob a imagem */
     border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .nome_artista {
@@ -254,6 +280,7 @@ li{
     height: 20%;
     display: flex;
     align-items: center;
+    padding-top: 40px;
 }
 
 .botao_maisOuvidas{
@@ -264,16 +291,17 @@ li{
 
 .botao_maisOuvidas.play{
     width: 60px;
-    height: 60px;
+    height: 58px;
     border-radius: 50%;
+    background-color: #1DB954;
 }
 
 .botao_maisOuvidas.seguindo{
     width: 100px;
     height: 30px;
     border-radius:20px ;
-    border-color: white;
-    border:2px solid;
+    color: white;
+    border: 1px solid hsla(0, 0%, 100%, 0.486);
     background-color: transparent;
 }
 
@@ -287,22 +315,27 @@ li{
 .menu_maisOuvidas{
     width: 100%;
     flex-direction: column;
-    background: rgb(209,40,40);
-    background: linear-gradient(180deg, rgba(209,40,40,1) 0%, rgba(158,49,49,1) 0%, rgba(18,18,18,1) 100%);
+    background: rgb(42,11,6);
+    background: linear-gradient(180deg, rgba(42,11,6,1) 10%, rgba(18,18,18,1) 51%);
 }
 
-.container_texto_maisOuvidas{
-    padding: 20px;
+.menu_central_espacamento{
+    padding: 30px;
 }
 
 .titulo_maisOuvidas{
     width: 100%;
     font-size: 30px;
     padding-top: 20px;
-    padding-bottom:0;
+    padding-bottom:30px;
     color: white;
 }
 
+
+.musicas_maisOuvidas_container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
 
 .lista_maisOuvidas{
     display: flex;
@@ -317,15 +350,26 @@ li{
     width: 100%;
     margin: 10px;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
 }
 
-.itens_maisOuvidas{
-    width: 100%;
+.texto_musica{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap:150px;
+    gap: 100px;
+    max-width: 100px;
+}
+
+.texto_padrao{
+    min-width: 100px;
+    color: white;
+}
+
+.numero_padrao{
+    min-width: 10px;
 }
 
 .foto_titulo{
@@ -337,7 +381,6 @@ li{
 
 .sugestoes.container_populares{
     display: flex;
-
 }
 
 .menu_central{
@@ -370,16 +413,3 @@ li{
     display: flex;
     gap: 10px;
 }   
-
-.footer{
-    background-color:white;
-    height: 11vh;
-    width: 100vw;
-    display: flex;
-    flex-direction:row-reverse;
-    bottom: 0;
-    flex-wrap: wrap;
-    margin:0px;
-    margin-top: 0;
-    position: fixed;
-}
