@@ -278,14 +278,17 @@ li{
 }
 
 .botao_maisOuvidas.mais_opcoes{
-    background-color: transparent;
+    background-color: transparent; 
+    display: flex;
+    padding-bottom: 10px;
+    font-size: 30px;
 }
 
 .menu_maisOuvidas{
     width: 100%;
     flex-direction: column;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 46%, rgba(8,109,18,1) 80%, rgba(12,255,102,1) 100%);
+    background: rgb(209,40,40);
+    background: linear-gradient(180deg, rgba(209,40,40,1) 0%, rgba(158,49,49,1) 0%, rgba(18,18,18,1) 100%);
 }
 
 .container_texto_maisOuvidas{
