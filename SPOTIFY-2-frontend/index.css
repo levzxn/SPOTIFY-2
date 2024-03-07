@@ -13,8 +13,8 @@ body{
 }
 
 .container_principal{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     display: flex;
 }
 
@@ -197,13 +197,11 @@ li{
 
 .banner {
     width: 100%;
-    height: 40%;
     display: flex;
     flex-wrap: wrap;
     background-image: url(./imagens/banner-kanye2.jpg);
     background-size:cover;
     background-position: center;
-    max-height: 40%;
     border-radius: 5px 5px 0 0;
 }
 
@@ -218,6 +216,10 @@ li{
     z-index: -1;
   }
 
+  .espacamento_itens_banner{
+    width: 100%;
+  }
+
 .itens_banner{
     display: flex;
     align-items: center;
@@ -227,7 +229,6 @@ li{
 .texto_banner{
     padding: 10px;
     overflow: hidden;
-    min-width: 600px;
     overflow: hidden;
     font-size: 2rem;
 }
@@ -236,11 +237,10 @@ li{
 
 .icone_artista{
     padding: 10px;
-    width: 15%;
 }
 
 .imagem_icone_artista{
-    width: 100%; /* altura automática para manter a proporção da imagem */
+    width: 150px; /* altura automática para manter a proporção da imagem */
     display: block; /* para remover o espaço extra sob a imagem */
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
