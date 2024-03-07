@@ -234,16 +234,11 @@ li{
 
 .icone_artista{
     padding: 10px;
-    width: 80%;
-    max-width: 250px;
-    height: 25vh;
-    max-height: 250px;
-    overflow: hidden;
+    width: 15%;
 }
 
 .imagem_icone_artista{
-    width: 100%; /* garantir que a imagem ocupe toda a largura da div */
-    height: auto; /* altura automática para manter a proporção da imagem */
+    width: 100%; /* altura automática para manter a proporção da imagem */
     display: block; /* para remover o espaço extra sob a imagem */
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
