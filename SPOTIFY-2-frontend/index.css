@@ -437,7 +437,38 @@ li {
     border-radius: 6px;
 }
 
+.container_albuns{
+    margin: 10px;
+}
 
+.container_h2_albuns{}
+
+.texto_padrao.nome_container{
+    font-size: 30px;
+}
+
+.texto_padrao.titulo_album{
+
+}
+
+.albuns{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.album{
+    padding: 10px;
+    width: fit-content;
+}
+
+.icone_album{
+    width: 200px;
+    border-radius: 5px;
+}
+
+.container_imagem{
+
+}
 
 
 
