@@ -140,7 +140,6 @@ li{
     margin-right: 20px;
     border-radius: 20px;
     background-color: #252323;
-
 }
 
 .botao.pequeno{
@@ -219,18 +218,21 @@ li{
     z-index: -1;
   }
 
+.itens_banner{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    padding-top: 50px;
+}
 .texto_banner{
     padding: 10px;
     overflow: hidden;
     min-width: 600px;
     overflow: hidden;
+    font-size: 2rem;
 }
 
-.itens_banner{
-    display: flex;
-    align-items: center;
-    padding: 5px;
-}
+
 
 .icone_artista{
     padding: 10px;
