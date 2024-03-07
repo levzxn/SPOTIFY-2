@@ -1,28 +1,28 @@
-*{
+* {
     margin: 0;
-	padding: 0;
-	border: 0;
+    padding: 0;
+    border: 0;
     font-family: "Montserrat", sans-serif;
     font-weight: 100;
     font-size: 15px;
     color: #b3b3b3;
 }
 
-body{
+body {
     background-color: black;
 }
 
-.container_principal{
+.container_principal {
     height: 100%;
     width: 100%;
     display: flex;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-li{
+li {
     display: flex;
     gap: 15px;
     align-items: flex-end;
@@ -32,7 +32,7 @@ li{
     margin: 7px;
 }
 
-.menu_lateral{
+.menu_lateral {
     background-color: black;
     display: flex;
     width: 400px;
@@ -44,7 +44,7 @@ li{
     position: relative;
 }
 
-.container_lateral.container1{
+.container_lateral.container1 {
     background-color: #121212;
     display: flex;
     /* justify-content: space-between; */
@@ -54,11 +54,11 @@ li{
 }
 
 
-.lista_lateral{
+.lista_lateral {
     display: flex;
 }
 
-.lista_lateral.lista1{
+.lista_lateral.lista1 {
     /* color: #b3b3b3; */
     /* display: flex; */
     justify-content: center;
@@ -69,7 +69,7 @@ li{
     width: 90%;
 }
 
-.container_lateral.container2{
+.container_lateral.container2 {
     background-color: #121212;
     /* display: flex; */
     height: 80%;
@@ -83,14 +83,15 @@ li{
     width: 3px;
     z-index: -1;
 
-  }
+}
+
 .container_lateral.container2::-webkit-scrollbar-thumb {
     border-radius: 40px;
-    border: 3px solid black;  
+    border: 3px solid black;
     z-index: -1;
-  }
+}
 
-.container_header.lateral{
+.container_header.lateral {
     display: flex;
     /* flex-direction: row; */
     /* justify-content: space-between; */
@@ -104,7 +105,7 @@ li{
     padding-bottom: 10px;
 }
 
-.header.lateral{
+.header.lateral {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -113,7 +114,7 @@ li{
     padding: 10px;
 }
 
-.biblioteca{
+.biblioteca {
     display: flex;
     gap: 15px;
     align-items: flex-end;
@@ -122,19 +123,19 @@ li{
     margin: 7px;
 }
 
-.botoes_header{
+.botoes_header {
     padding-top: 11px;
     padding-right: 20px;
 }
 
-.filtros_pesquisa_botoes{
+.filtros_pesquisa_botoes {
     display: flex;
     flex-wrap: wrap;
     padding-left: 20px;
     padding-top: 5px;
 }
 
-.botao.largo{
+.botao.largo {
     height: 30px;
     width: 85px;
     margin-right: 20px;
@@ -142,7 +143,7 @@ li{
     background-color: #252323;
 }
 
-.botao.pequeno{
+.botao.pequeno {
     height: 30px;
     width: 30px;
     background-color: #252323;
@@ -150,44 +151,44 @@ li{
     padding: 7px;
 }
 
-.sugestoes.container_lateral{
+.sugestoes.container_lateral {
     padding-top: 90px;
 }
 
-.lista_lateral.lista2{
+.lista_lateral.lista2 {
     /* display: flex; */
     flex-wrap: wrap;
     padding: 7px;
 }
 
-.container_musica{
+.container_musica {
     display: flex;
     /* flex-wrap: wrap; */
     align-items: center;
     /* text-align: center; */
 }
 
-.imagem.album1{
-    width:55px;
-    height:55px;
+.imagem.album1 {
+    width: 55px;
+    height: 55px;
     border-radius: 5px;
 }
 
-.titulo_musica{
+.titulo_musica {
     font-size: 18px;
     margin-left: 10px;
     min-width: 150px;
     color: white;
 }
 
-.descricao_musica{
+.descricao_musica {
     font-size: 10px;
     padding: 2px;
     padding-left: 12px;
     color: white;
 }
 
-.perfil_artista{
+.perfil_artista {
     background-color: #121212;
     height: 97.5%;
     width: 100%;
@@ -202,7 +203,7 @@ li{
     display: flex;
     flex-wrap: wrap;
     background-image: url(./imagens/banner-kanye2.jpg);
-    background-size:cover;
+    background-size: cover;
     background-position: center;
     border-radius: 5px 5px 0 0;
 }
@@ -211,24 +212,26 @@ li{
     width: 3px;
     z-index: -1;
 
-  }
+}
+
 .perfil_artista::-webkit-scrollbar-thumb {
     border-radius: 40px;
-    border: 3px solid black;  
+    border: 3px solid black;
     z-index: -1;
-  }
+}
 
-  .espacamento_itens_banner{
+.espacamento_itens_banner {
     width: 100%;
-  }
+}
 
-.itens_banner{
+.itens_banner {
     display: flex;
     align-items: center;
     padding: 5px;
     padding-top: 50px;
 }
-.texto_banner{
+
+.texto_banner {
     padding: 10px;
     overflow: hidden;
     overflow: hidden;
@@ -237,13 +240,15 @@ li{
 
 
 
-.icone_artista{
+.icone_artista {
     padding: 10px;
 }
 
-.imagem_icone_artista{
-    width: 150px; /* altura automática para manter a proporção da imagem */
-    display: block; /* para remover o espaço extra sob a imagem */
+.imagem_icone_artista {
+    width: 150px;
+    /* altura automática para manter a proporção da imagem */
+    display: block;
+    /* para remover o espaço extra sob a imagem */
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -273,7 +278,7 @@ li{
     color: white;
 }
 
-.menu_botoes{
+.menu_botoes {
     width: 100%;
     height: 20%;
     display: flex;
@@ -281,61 +286,62 @@ li{
     padding-top: 40px;
 }
 
-.botao_maisOuvidas{
+.botao_maisOuvidas {
     flex-direction: row;
     margin: 15px;
 
 }
 
-.botao_maisOuvidas.play{
+.botao_maisOuvidas.play {
     width: 60px;
     height: 58px;
     border-radius: 50%;
     background-color: #1DB954;
 }
 
-.botao_maisOuvidas.seguindo{
+.botao_maisOuvidas.seguindo {
     width: 100px;
     height: 30px;
-    border-radius:20px ;
+    border-radius: 20px;
     color: white;
     border: 1px solid hsla(0, 0%, 100%, 0.486);
     background-color: transparent;
 }
 
-.botao_maisOuvidas.mais_opcoes{
-    background-color: transparent; 
+.botao_maisOuvidas.mais_opcoes {
+    background-color: transparent;
     display: flex;
     padding-bottom: 10px;
     font-size: 30px;
 }
 
-.menu_maisOuvidas{
+.menu_maisOuvidas {
     width: 100%;
+    padding: 15px;
     flex-direction: column;
-    background: rgb(42,11,6);
-    background: linear-gradient(180deg, rgba(42,11,6,1) 10%, rgba(18,18,18,1) 51%);
+    background: rgb(42, 11, 6);
+    background: linear-gradient(180deg, rgba(42, 11, 6, 1) 10%, rgba(18, 18, 18, 1) 51%);
 }
 
-.menu_central_espacamento{
+.menu_central_espacamento {
     padding: 30px;
 }
 
-.titulo_maisOuvidas{
+.titulo_maisOuvidas {
     width: 100%;
     font-size: 30px;
     padding-top: 20px;
-    padding-bottom:30px;
+    padding-bottom: 30px;
     color: white;
 }
 
 
-.musicas_maisOuvidas_container{
+.musicas_maisOuvidas_container {
     display: grid;
     grid-template-columns: 1fr;
 }
 
-.lista_maisOuvidas{
+.lista_maisOuvidas {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -344,7 +350,7 @@ li{
     padding: 0;
 }
 
-.musicas_maisOuvidas{
+.musicas_maisOuvidas {
     width: 100%;
     margin: 10px;
     padding: 10px;
@@ -354,34 +360,34 @@ li{
 
 }
 
-.texto_musica{
+.texto_musica {
     display: flex;
     flex-direction: row;
     gap: 100px;
     max-width: 100px;
 }
 
-.texto_padrao{
+.texto_padrao {
     min-width: 150px;
     color: white;
 }
 
-.numero_padrao{
+.numero_padrao {
     min-width: 10px;
 }
 
-.foto_titulo{
+.foto_titulo {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap:20px;
+    gap: 20px;
 }
 
-.sugestoes.container_populares{
+.sugestoes.container_populares {
     display: flex;
 }
 
-.menu_central{
+.menu_central {
     background-color: black;
     display: flex;
     width: 100vw;
@@ -391,14 +397,14 @@ li{
     padding-left: 0px;
 }
 
-.menu_central_principal{
-    background-color:  #121212;
+.menu_central_principal {
+    background-color: #121212;
     width: 100%;
     height: 100%;
     border-radius: 5px;
 }
 
-.menu_central_header{
+.menu_central_header {
     display: flex;
     height: 64px;
     width: 100%;
@@ -408,13 +414,13 @@ li{
     position: fixed;
 }
 
-.botoes_header_central{
+.botoes_header_central {
     display: flex;
     gap: 10px;
-}   
+}
 
 
-.menu_central_recentes{
+.menu_central_recentes {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -422,7 +428,7 @@ li{
     padding: 20px;
 }
 
-.container_musica_central{
+.container_musica_central {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
