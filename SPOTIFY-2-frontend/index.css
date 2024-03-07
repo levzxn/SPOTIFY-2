@@ -469,7 +469,9 @@ li {
 
 }
 
-
+.menu_central_escolhas{
+    padding: 20px;
+}
 
 @media (min-width:940px) {
     .menu_central_recentes{
