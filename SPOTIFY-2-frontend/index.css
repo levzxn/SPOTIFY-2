@@ -317,7 +317,6 @@ li {
 
 .menu_maisOuvidas {
     width: 100%;
-    padding: 15px;
     flex-direction: column;
     background: rgb(42, 11, 6);
     background: linear-gradient(180deg, rgba(42, 11, 6, 1) 10%, rgba(18, 18, 18, 1) 51%);
