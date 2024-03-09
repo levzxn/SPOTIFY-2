@@ -1,0 +1,444 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify 2</title>
+    <link rel="shortcut icon" type="imagex/ico" href="./imagens/Spotify.ico">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container_principal">
+        <section class="menu_lateral">
+            <div class="container_lateral container1">
+                <ul class="lista_lateral lista1">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0,0,256,256" width="25px" height="25px">
+                            <g fill-opacity="0.9098" fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
+                                stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none"
+                                text-anchor="none" style="mix-blend-mode: normal">
+                                <g transform="scale(5.33333,5.33333)">
+                                    <path
+                                        d="M39.5,43h-9c-1.381,0 -2.5,-1.119 -2.5,-2.5v-9c0,-1.105 -0.895,-2 -2,-2h-4c-1.105,0 -2,0.895 -2,2v9c0,1.381 -1.119,2.5 -2.5,2.5h-9c-1.381,0 -2.5,-1.119 -2.5,-2.5v-19.087c0,-2.299 1.054,-4.471 2.859,-5.893l14.212,-11.199c0.545,-0.428 1.313,-0.428 1.857,0l14.214,11.199c1.805,1.422 2.858,3.593 2.858,5.891v19.089c0,1.381 -1.119,2.5 -2.5,2.5z"
+                                        style="fill: #b3b3b3;"></path>
+                                </g>
+                            </g>
+                        </svg>
+                        <p>Início</p>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0,0,256,256" width="25px" height="25px">
+                            <g fill-opacity="0.9098" fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
+                                stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none"
+                                text-anchor="none" style="mix-blend-mode: normal">
+                                <g transform="scale(5.33333,5.33333)">
+                                    <path
+                                        d="M20.5,6c-7.99037,0 -14.5,6.50964 -14.5,14.5c0,7.99036 6.50963,14.5 14.5,14.5c3.45636,0 6.63371,-1.22096 9.12891,-3.25l9.81055,9.81055c0.37623,0.39185 0.9349,0.54969 1.46055,0.41265c0.52565,-0.13704 0.93616,-0.54754 1.07319,-1.07319c0.13704,-0.52565 -0.0208,-1.08432 -0.41265,-1.46055l-9.81055,-9.81055c2.02904,-2.4952 3.25,-5.67255 3.25,-9.12891c0,-7.99036 -6.50963,-14.5 -14.5,-14.5zM20.5,9c6.36905,0 11.5,5.13096 11.5,11.5c0,3.10261 -1.2238,5.90572 -3.20898,7.9707c-0.12237,0.08994 -0.23037,0.19794 -0.32031,0.32031c-2.06499,1.98518 -4.86809,3.20898 -7.9707,3.20898c-6.36905,0 -11.5,-5.13096 -11.5,-11.5c0,-6.36904 5.13095,-11.5 11.5,-11.5z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                        <p>Buscar</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="container_lateral container2">
+                <div class="container_header lateral">
+                    <header class="header lateral">
+                        <div class="biblioteca">
+                            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24"
+                                class="Svg-sc-ytk21e-0 bneLcE" width="25px" heigth="25px">
+                                <path
+                                    d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+                                    style="fill: #b3b3b3;"></path>
+                            </svg>
+                            <a>Minha biblioteca</a>
+                        </div>
+                        <div class="botoes_header botao1">
+                            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
+                                class="Svg-sc-ytk21e-0 dYnaPI" width="20px" heigth="20px">
+                                <path
+                                    d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75z"
+                                    style="fill: #b3b3b3;"></path>
+                            </svg>
+                        </div>
+                        <div class="botoes_header botao2">
+                            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
+                                class="Svg-sc-ytk21e-0 cAMMLk" width="20px" heigth="20px">
+                                <path
+                                    d="M7.19 1A.749.749 0 0 1 8.47.47L16 7.99l-7.53 7.521a.75.75 0 0 1-1.234-.815.75.75 0 0 1 .174-.243l5.72-5.714H.75a.75.75 0 1 1 0-1.498h12.38L7.41 1.529a.749.749 0 0 1-.22-.53z"
+                                    style="fill: #b3b3b3;"></path>
+                            </svg>
+                        </div>
+                        <div class="filtros_pesquisa">
+                            <div class="filtros_pesquisa_botoes">
+                                <button class="botao largo">Artistas</button>
+                                <button class="botao largo">Álbuns</button>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+                <div class="sugestoes container_lateral">
+                    <ul class="lista_lateral lista2">
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                        <li class="musica">
+                            <div class="container_musica musica1">
+                                <a href="teste.com"></a>
+                                <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px"
+                                    height="20px">
+                                <div class="container_infos_musica">
+                                    <p class="titulo_musica">VULTURES 1</p>
+                                    <p class="descricao_musica">Álbum • Kanye West</p>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="menu_central">
+            <div class="perfil_artista">
+                <header class="menu_central_header">
+                    <div class="botoes_header_central esquerda">
+                        <button class="botao pequeno">
+                            <svg data-encore-id="icon" role="img" width="15px" fill="white" aria-hidden="true"
+                                class="Svg-sc-ytk21e-0 cAMMLk IYDlXmBmmUKHveMzIPCF" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z">
+                                </path>
+                            </svg>
+                        </button>
+                        <button class="botao pequeno">
+                            <svg data-encore-id="icon" role="img" width="15px" fill="white" aria-hidden="true"
+                                class="Svg-sc-ytk21e-0 cAMMLk IYDlXmBmmUKHveMzIPCF" viewBox="0 0 16 16">
+                                <path
+                                    d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="botoes_header_central direita">
+                        <button class="botao largo">Paga nois</button>
+                        <button class="botao pequeno"><svg data-encore-id="icon" fill="#b3b3b3" role="img"
+                                aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dCAvla" width="15px"
+                                heigth="3px">
+                                <path
+                                    d="M8 0a5.5 5.5 0 0 0-5.5 5.5v3.069L.307 12.376A.75.75 0 0 0 .25 13h15.5a.75.75 0 0 0-.057-.624L13.5 8.567V5.5A5.5 5.5 0 0 0 8 0zm1.937 14.5H6.063a2 2 0 0 0 3.874 0z">
+                                </path>
+                            </svg></button>
+                    </div>
+                </header>
+                <div class="menu_central_sugestoes">
+                    <div class="menu_central_recentes">
+                        <div class="container_musica_central musica1">
+                            <a href="teste.com"></a>
+                            <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px" height="20px">
+                            <div class="container_infos_musica">
+                                <p class="titulo_musica">VULTURES 1</p>
+                            </div>
+                        </div>
+                        <div class="container_musica_central musica1">
+                            <a href="teste.com"></a>
+                            <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px" height="20px">
+                            <div class="container_infos_musica">
+                                <p class="titulo_musica">VULTURES 1</p>
+                            </div>
+                        </div>
+                        <div class="container_musica_central musica1">
+                            <a href="teste.com"></a>
+                            <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px" height="20px">
+                            <div class="container_infos_musica">
+                                <p class="titulo_musica">VULTURES 1</p>
+                            </div>
+                        </div>
+                        <div class="container_musica_central musica1">
+                            <a href="teste.com"></a>
+                            <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px" height="20px">
+                            <div class="container_infos_musica">
+                                <p class="titulo_musica">VULTURES 1</p>
+                            </div>
+                        </div>
+                        <div class="container_musica_central musica1">
+                            <a href="teste.com"></a>
+                            <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px" height="20px">
+                            <div class="container_infos_musica">
+                                <p class="titulo_musica">VULTURES 1</p>
+                            </div>
+                        </div>
+                        <div class="container_musica_central musica1">
+                            <a href="teste.com"></a>
+                            <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px" height="20px">
+                            <div class="container_infos_musica">
+                                <p class="titulo_musica">VULTURES 1</p>
+                            </div>
+                        </div>
+                        <div class="container_musica_central musica1">
+                            <a href="teste.com"></a>
+                            <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px" height="20px">
+                            <div class="container_infos_musica">
+                                <p class="titulo_musica">VULTURES 1</p>
+                            </div>
+                        </div>
+                        <div class="container_musica_central musica1">
+                            <a href="teste.com"></a>
+                            <img class="imagem album1" src="imagens/capa.jpeg" alt="capa" width="20px" height="20px">
+                            <div class="container_infos_musica">
+                                <p class="titulo_musica">VULTURES 1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu_central_escolhas">
+                    <div class="container_texto_menu_escolhas">
+                        <div class="texto_menu_escolhas">
+                            <h2>Feito para Hitler Jr.</h2>
+                        </div>
+                        <div class="capas_escolhas">
+                            <div class="container_capa_conteudo">
+                                <div class="capa_conteudo">
+                                    <div class="container_imagem conteudo">
+                                        <img class="icone_album playlist" src="imagens/brenopaixao.jpeg">
+                                    </div>
+                                    <h1 class="texto_padrao titulo_album">Daily Mix 2</h1>
+                                    <p class="texto_padrao informacoes">Dj Brenno Paixão e +4</p>
+                                </div>
+                            </div>
+                            <div class="container_capa_conteudo">
+                                <div class="capa_conteudo">
+                                    <div class="container_imagem conteudo">
+                                        <img class="icone_album artista" src="imagens/terraplana.jpeg">
+                                    </div>
+                                    <h1 class="texto_padrao titulo_album">terraplana</h1>
+                                    <p class="texto_padrao informacoes">Artista</p>
+                                </div>
+                            </div>
+                            <div class="container_capa_conteudo">
+                                <div class="capa_conteudo">
+                                    <div class="container_imagem conteudo">
+                                        <img class="icone_album playlist" src="imagens/brenopaixao.jpeg">
+                                    </div>
+                                    <h1 class="texto_padrao titulo_album">Daily Mix 2</h1>
+                                    <p class="texto_padrao informacoes">Dj Brenno Paixão e +4</p>
+                                </div>
+                            </div>
+                            <div class="container_capa_conteudo">
+                                <div class="capa_conteudo">
+                                    <div class="container_imagem conteudo">
+                                        <img class="icone_album playlist" src="imagens/brenopaixao.jpeg">
+                                    </div>
+                                    <h1 class="texto_padrao titulo_album">Daily Mix 2</h1>
+                                    <p class="texto_padrao informacoes">Dj Brenno Paixão e +4</p>
+                                </div>
+                            </div>
+                            <div class="container_capa_conteudo">
+                                <div class="capa_conteudo">
+                                    <div class="container_imagem conteudo">
+                                        <img class="icone_album playlist" src="imagens/brenopaixao.jpeg">
+                                    </div>
+                                    <h1 class="texto_padrao titulo_album">Daily Mix 2</h1>
+                                    <p class="texto_padrao informacoes">Dj Brenno Paixão e +4</p>
+                                </div>
+                            </div>
+                            <div class="container_capa_conteudo">
+                                <div class="capa_conteudo">
+                                    <div class="container_imagem conteudo">
+                                        <img class="icone_album playlist" src="imagens/paulosergio.jpeg">
+                                    </div>
+                                    <h1 class="texto_padrao titulo_album">Daily Mix 2</h1>
+                                    <p class="texto_padrao informacoes">Pauno Sergio, DJ Brenno Paixão e +4</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+    <footer class="footer">
+
+    </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,521 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    color: #b3b3b3;
+}
+
+body {
+    background-color: black;
+}
+
+.container_principal {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    /* flex-direction: row; */
+    /* justify-self: center; */
+    padding-left: 15px;
+    margin: 7px;
+}
+
+.menu_lateral {
+    background-color: black;
+    display: flex;
+    width: 400px;
+    height: 90vh;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    /* border-radius: 5px; */
+    padding: 10px;
+    position: relative;
+}
+
+.container_lateral.container1 {
+    background-color: #121212;
+    display: flex;
+    /* justify-content: space-between; */
+    height: 15%;
+    width: 100%;
+    border-radius: 6px;
+}
+
+
+.lista_lateral {
+    display: flex;
+}
+
+.lista_lateral.lista1 {
+    /* color: #b3b3b3; */
+    /* display: flex; */
+    justify-content: center;
+    flex-direction: column;
+    /* align-content: stretch; */
+    /* align-items: flex-start; */
+    padding: 10px;
+    width: 90%;
+}
+
+.container_lateral.container2 {
+    background-color: #121212;
+    /* display: flex; */
+    height: 80%;
+    /* width: 100%; */
+    border-radius: 6px;
+    /* flex-direction: column; */
+    overflow-y: auto;
+}
+
+.container_lateral.container2::-webkit-scrollbar {
+    width: 3px;
+    z-index: -1;
+
+}
+
+.container_lateral.container2::-webkit-scrollbar-thumb {
+    border-radius: 40px;
+    border: 3px solid black;
+    z-index: -1;
+}
+
+.container_header.lateral {
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+    /* height: 10vh; */
+    /* width: 100vw; */
+    max-width: 94.4%;
+    position: absolute;
+    /* flex-wrap: wrap; */
+    background-color: #121212;
+    border-radius: 6px 6px 0 0;
+    padding-bottom: 10px;
+}
+
+.header.lateral {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* height: 40%; */
+    /* width: 100%; */
+    padding: 10px;
+}
+
+.biblioteca {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    /* flex-direction: row; */
+    padding-left: 15px;
+    margin: 7px;
+}
+
+.botoes_header {
+    padding-top: 11px;
+    padding-right: 20px;
+}
+
+.filtros_pesquisa_botoes {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+.botao.largo {
+    height: 30px;
+    width: 85px;
+    margin-right: 20px;
+    border-radius: 20px;
+    background-color: #252323;
+}
+
+.botao.pequeno {
+    height: 30px;
+    width: 30px;
+    background-color: #252323;
+    border-radius: 30px;
+    padding: 7px;
+}
+
+.sugestoes.container_lateral {
+    padding-top: 90px;
+}
+
+.lista_lateral.lista2 {
+    /* display: flex; */
+    flex-wrap: wrap;
+    padding: 7px;
+}
+
+.container_musica {
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    /* text-align: center; */
+}
+
+.imagem.album1 {
+    width: 55px;
+    height: 55px;
+    border-radius: 5px;
+}
+
+.titulo_musica {
+    font-size: 18px;
+    margin-left: 10px;
+    min-width: 150px;
+    color: white;
+}
+
+.descricao_musica {
+    font-size: 10px;
+    padding: 2px;
+    padding-left: 12px;
+    color: white;
+}
+
+.perfil_artista {
+    background-color: #121212;
+    height: 97.5%;
+    width: 100%;
+    min-width: 70vw;
+    overflow-y: auto;
+    border-radius: 5px;
+    position: relative;
+}
+
+.banner {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.perfil_artista::-webkit-scrollbar {
+    width: 3px;
+    z-index: -1;
+
+}
+
+.perfil_artista::-webkit-scrollbar-thumb {
+    border-radius: 40px;
+    border: 3px solid black;
+    z-index: -1;
+}
+
+.espacamento_itens_banner {
+    width: 100%;
+}
+
+.itens_banner {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    padding-top: 50px;
+}
+
+.texto_banner {
+    padding: 10px;
+    overflow: hidden;
+    overflow: hidden;
+    font-size: 2rem;
+}
+
+
+
+.icone_artista {
+    padding: 10px;
+}
+
+.imagem_icone_artista {
+    width: 150px;
+    /* altura automática para manter a proporção da imagem */
+    display: block;
+    /* para remover o espaço extra sob a imagem */
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.nome_artista {
+    margin: 0;
+    font-size: 6rem;
+    color: white;
+    overflow: hidden;
+}
+
+.container_verificado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.icone_verificado {
+    width: 24px;
+    height: 24px;
+    fill: rgb(1, 161, 253);
+    margin-right: 5px;
+}
+
+.texto.texto_banner {
+    font-size: 15px;
+    color: white;
+}
+
+.menu_botoes {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.botao_maisOuvidas {
+    flex-direction: row;
+    margin: 15px;
+
+}
+
+.botao_maisOuvidas.play {
+    width: 60px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: #1DB954;
+}
+
+.botao_maisOuvidas.seguindo {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    color: white;
+    border: 1px solid hsla(0, 0%, 100%, 0.486);
+    background-color: transparent;
+}
+
+.botao_maisOuvidas.mais_opcoes {
+    background-color: transparent;
+    display: flex;
+    padding-bottom: 10px;
+    font-size: 30px;
+}
+
+.menu_maisOuvidas {
+    width: 100%;
+    flex-direction: column;
+    background: rgb(42, 11, 6);
+    background: linear-gradient(180deg, rgba(42, 11, 6, 1) 10%, rgba(18, 18, 18, 1) 51%);
+}
+
+.menu_central_espacamento {
+    padding: 30px;
+}
+
+.titulo_maisOuvidas {
+    width: 100%;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    color: white;
+}
+
+
+.musicas_maisOuvidas_container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.lista_maisOuvidas {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.musicas_maisOuvidas {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.texto_musica {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    max-width: 100px;
+}
+
+.texto_padrao {
+    min-width: 150px;
+    color: white;
+}
+
+.numero_padrao {
+    min-width: 10px;
+}
+
+.foto_titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.sugestoes.container_populares {
+    display: flex;
+}
+
+.menu_central {
+    background-color: black;
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    flex-wrap: wrap;
+    padding: 10px;
+    padding-left: 0px;
+}
+
+.menu_central_principal {
+    background-color: #121212;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.menu_central_header {
+    display: flex;
+    padding: 16px;
+    width: 100%;
+    position: fixed;
+    background-color: #121212;
+}
+
+.botoes_header_central {
+    display: flex;
+    gap: 10px;
+}
+
+.botoes_header_central.direita{
+}
+
+.menu_central_recentes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 64px;
+    padding: 20px;
+}
+
+.container_musica_central {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #252323;
+    justify-content: flex-start;
+    border-radius: 6px;
+    box-shadow: rgb(0, 0, 0) 0px 5px 10px;
+}
+
+.container_albuns{
+    margin: 10px;
+}
+
+.container_h2_albuns{}
+
+.texto_padrao.nome_container{
+    font-size: 30px;
+}
+
+.texto_padrao.titulo_album{
+
+}
+
+.albuns{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.album{
+    padding: 10px;
+    width: fit-content;
+}
+
+.icone_album{
+    width: 200px;
+    border-radius: 5px;
+}
+
+.icone_album.artista{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.container_imagem.conteudo{
+}
+
+.menu_central_escolhas{
+    padding: 20px;
+}
+
+.capas_escolhas{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    margin-top: 15px;
+    gap: 15px;
+}
+
+.container_capa_conteudo{
+    width: 100%;
+    background-color: #252323;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    box-shadow: rgb(0, 0, 0) 0px 5px 15px;
+}
+
+
+.texto_menu_escolhas h2{
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+.texto_padrao.informacoes{
+    margin-top: 3%;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.capa_conteudo{
+    margin: 20px;
+}
+
+@media (min-width:940px) {
+    .menu_central_recentes{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+    
+}
+
