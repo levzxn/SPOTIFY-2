@@ -323,8 +323,8 @@ li {
 }
 
 .menu_maisOuvidas {
-    width: 100%;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(20px, 1fr));
     background: rgb(42, 11, 6);
     background: linear-gradient(180deg, rgba(42, 11, 6, 1) 10%, rgba(18, 18, 18, 1) 51%);
 }
@@ -376,6 +376,10 @@ li {
 .texto_padrao {
     min-width: 150px;
     color: white;
+}
+
+.texto_padrao.duracao{
+    min-width: fit-content;
 }
 
 .numero_padrao {
@@ -460,6 +464,8 @@ li {
 .albuns {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    min-width: 400px;
+    gap: 10px
 }
 
 .album {
@@ -528,6 +534,11 @@ li {
     .menu_central_recentes {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+}
 
-
+@media (max-width:940px)
+{
+    .menu_maisOuvidas .texto_padrao.visualizacoes{
+        display: none;
+    }
 }
