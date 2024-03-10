@@ -528,7 +528,8 @@ li {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column: 1 / span 2;
-    max-height: fit-content;
+    height: 100%;
+    align-content: space-between;
 }
 
 .container_reproduzindo {
