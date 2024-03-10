@@ -9,6 +9,11 @@ class Artista(models.Model):
 
     def __str__(self):
         return self.nome_artista
+    
+    @property
+    def vizualizacoes_formatadas(self):
+        v_format =  f'{self.vizualizacoes_mensais:,.0f}'
+        return v_format.replace(',','.')
 
 class Album(models.Model):
     titulo_album = models.CharField(max_length=30)
@@ -27,3 +32,16 @@ class Musica(models.Model):
 
     def __str__(self):
         return self.titulo_musica
+    
+    @property
+    def duracao_formatada(self):
+        segundos = self.duracao.seconds
+        horas = segundos // 3600
+        minutos = (segundos % 3600) // 60
+        segundos_restantes = segundos % 60
+        segundos_f = round(segundos_restantes,2)
+
+        if horas > 0:
+            return f'{horas}:{minutos}:{segundos_f}'
+        else:
+            return f'{minutos}:{segundos_restantes}'

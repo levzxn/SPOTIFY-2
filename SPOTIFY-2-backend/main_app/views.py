@@ -1,6 +1,9 @@
 from django.shortcuts import render,get_object_or_404
 from main_app.models import Artista,Album,Musica
 
+def index(request):
+    return render(request,'index.html')
+
 def artista(request,nome_art):
     artista = get_object_or_404(Artista,nome_artista=nome_art)
     albuns_artista = Album.objects.filter(artista=artista)

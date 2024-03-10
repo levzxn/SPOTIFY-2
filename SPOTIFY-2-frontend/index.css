@@ -17,7 +17,7 @@ body {
     width: 98.9%;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto;
     padding: 10px;
     gap: 10px;
 }
@@ -528,7 +528,11 @@ li {
     margin: 20px;
 }
 
-.footer {}
+.footer {
+    display: flex;
+    height: 100px;
+    width: 100%;
+}
 
 @media (min-width:940px) {
     .menu_central_recentes {
