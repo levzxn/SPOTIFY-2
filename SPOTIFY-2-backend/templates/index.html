@@ -34,124 +34,36 @@
     </header>
     <div class="menu_central_sugestoes">
         <div class="menu_central_recentes">
+            {%for musica in dados.musicas%}
             <div class="container_musica_central musica1">
                 <a href="teste.com"></a>
-                <img class="imagem album1" src="imagens/kanye-capa1.jpeg" alt="capa" width="20px" height="20px">
+                <img class="imagem album1" src="/media/{{musica.album.foto_album}}" alt="capa" width="20px" height="20px">
                 <div class="container_infos_musica">
-                    <p class="titulo_musica">VULTURES 1</p>
+                    <p class="titulo_musica">{{musica.titulo_musica}}</p>
                 </div>
             </div>
-            <div class="container_musica_central musica1">
-                <a href="teste.com"></a>
-                <img class="imagem album1" src="imagens/kanye-capa1.jpeg" alt="capa" width="20px" height="20px">
-                <div class="container_infos_musica">
-                    <p class="titulo_musica">VULTURES 1</p>
-                </div>
-            </div>
-            <div class="container_musica_central musica1">
-                <a href="teste.com"></a>
-                <img class="imagem album1" src="imagens/kanye-capa1.jpeg" alt="capa" width="20px" height="20px">
-                <div class="container_infos_musica">
-                    <p class="titulo_musica">VULTURES 1</p>
-                </div>
-            </div>
-            <div class="container_musica_central musica1">
-                <a href="teste.com"></a>
-                <img class="imagem album1" src="imagens/kanye-capa1.jpeg" alt="capa" width="20px" height="20px">
-                <div class="container_infos_musica">
-                    <p class="titulo_musica">VULTURES 1</p>
-                </div>
-            </div>
-            <div class="container_musica_central musica1">
-                <a href="teste.com"></a>
-                <img class="imagem album1" src="imagens/kanye-capa1.jpeg" alt="capa" width="20px" height="20px">
-                <div class="container_infos_musica">
-                    <p class="titulo_musica">VULTURES 1</p>
-                </div>
-            </div>
-            <div class="container_musica_central musica1">
-                <a href="teste.com"></a>
-                <img class="imagem album1" src="imagens/kanye-capa1.jpeg" alt="capa" width="20px" height="20px">
-                <div class="container_infos_musica">
-                    <p class="titulo_musica">VULTURES 1</p>
-                </div>
-            </div>
-            <div class="container_musica_central musica1">
-                <a href="teste.com"></a>
-                <img class="imagem album1" src="imagens/kanye-capa1.jpeg" alt="capa" width="20px" height="20px">
-                <div class="container_infos_musica">
-                    <p class="titulo_musica">VULTURES 1</p>
-                </div>
-            </div>
-            <div class="container_musica_central musica1">
-                <a href="teste.com"></a>
-                <img class="imagem album1" src="imagens/kanye-capa1.jpeg" alt="capa" width="20px" height="20px">
-                <div class="container_infos_musica">
-                    <p class="titulo_musica">VULTURES 1</p>
-                </div>
-            </div>
+            {%endfor%}
         </div>
     </div>
     <div class="menu_central_escolhas">
         <div class="container_texto_menu_escolhas">
             <div class="texto_menu_escolhas">
-                <h2>Feito para Hitler Jr.</h2>
+                <h2>Feito para você</h2>
             </div>
             <div class="capas_escolhas">
+                {%for album in dados.albuns%}
                 <div class="container_capa_conteudo">
                     <div class="capa_conteudo">
                         <div class="container_imagem conteudo">
-                            <img class="icone_album playlist" src="imagens/mix-brenopaixao.jpeg">
+                            <img class="icone_album playlist" src="/media/{{album.foto_album}}">
                         </div>
-                        <h1 class="texto_padrao titulo_album">Daily Mix 2</h1>
-                        <p class="texto_padrao informacoes">Dj Brenno Paixão e +4</p>
+                        <a href="{%url 'album' album.titulo_album%}">
+                            <p class="texto_padrao titulo_album">{{album.titulo_album}}</p>
+                        </a>
+                        <a class="texto_padrao informacoes" href="{%url 'artista' album.artista.nome_artista%}">{{album.artista.nome_artista}}</a>
                     </div>
                 </div>
-                <div class="container_capa_conteudo">
-                    <div class="capa_conteudo">
-                        <div class="container_imagem conteudo">
-                            <img class="icone_album artista" src="imagens/terraplana.jpeg">
-                        </div>
-                        <h1 class="texto_padrao titulo_album">terraplana</h1>
-                        <p class="texto_padrao informacoes">Artista</p>
-                    </div>
-                </div>
-                <div class="container_capa_conteudo">
-                    <div class="capa_conteudo">
-                        <div class="container_imagem conteudo">
-                            <img class="icone_album playlist" src="imagens/mix-brenopaixao.jpeg">
-                        </div>
-                        <h1 class="texto_padrao titulo_album">Daily Mix 2</h1>
-                        <p class="texto_padrao informacoes">Dj Brenno Paixão e +4</p>
-                    </div>
-                </div>
-                <div class="container_capa_conteudo">
-                    <div class="capa_conteudo">
-                        <div class="container_imagem conteudo">
-                            <img class="icone_album playlist" src="imagens/mix-brenopaixao.jpeg">
-                        </div>
-                        <h1 class="texto_padrao titulo_album">Daily Mix 2</h1>
-                        <p class="texto_padrao informacoes">Dj Brenno Paixão e +4</p>
-                    </div>
-                </div>
-                <div class="container_capa_conteudo">
-                    <div class="capa_conteudo">
-                        <div class="container_imagem conteudo">
-                            <img class="icone_album playlist" src="imagens/mix-brenopaixao.jpeg">
-                        </div>
-                        <h1 class="texto_padrao titulo_album">Daily Mix 2</h1>
-                        <p class="texto_padrao informacoes">Dj Brenno Paixão e +4</p>
-                    </div>
-                </div>
-                <div class="container_capa_conteudo">
-                    <div class="capa_conteudo">
-                        <div class="container_imagem conteudo">
-                            <img class="icone_album playlist" src="imagens/paulosergio.jpeg">
-                        </div>
-                        <h1 class="texto_padrao titulo_album">Daily Mix 2</h1>
-                        <p class="texto_padrao informacoes">Pauno Sergio, DJ Brenno Paixão e +4</p>
-                    </div>
-                </div>
+                {%endfor%}
             </div>
         </div>
     </div>

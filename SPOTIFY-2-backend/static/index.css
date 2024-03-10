@@ -9,21 +9,30 @@
 }
 
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: black;
 }
 
-a{
-    text-decoration: none;
+p{
+    font-size: 1em;
+}
+
+i{
+    color: #b3b3b3;
+}
+
+i:hover{
+    color: #ddd;
 }
 
 .container_principal {
-    height: 100%;
-    width: 98.9%;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: auto;
-    padding: 10px;
-    gap: 10px;
+    padding: 0.3vw 0.3vh;
+    gap: 0.3vw 0.3vh;
+    height: 100vh;
+    min-height: 100%;
+    box-sizing: border-box;
 }
 
 ul {
@@ -43,20 +52,20 @@ li {
 .menu_lateral {
     background-color: black;
     display: flex;
-    height: 90vh;
+    height:87vh;
     flex-wrap: wrap;
     position: relative;
     max-width: 100%;
+    gap: 1%;
 }
 
 
 .container_lateral.container1 {
     background-color: #121212;
     display: flex;
-    /* justify-content: space-between; */
-    height: 15%;
     width: 100%;
     border-radius: 6px;
+    height: 12%;
 }
 
 
@@ -65,24 +74,18 @@ li {
 }
 
 .lista_lateral.lista1 {
-    /* color: #b3b3b3; */
-    /* display: flex; */
     justify-content: center;
     flex-direction: column;
-    /* align-content: stretch; */
-    /* align-items: flex-start; */
     padding: 10px;
     width: 90%;
 }
 
 .container_lateral.container2 {
-    background-color: #121212;
-    /* display: flex; */
-    height: 80%;
+    background-color: rgb(18, 18, 18);
     width: 100%;
     border-radius: 6px;
-    /* flex-direction: column; */
     overflow-y: auto;
+    height: 87%;
 }
 
 .container_lateral.container2::-webkit-scrollbar {
@@ -99,13 +102,8 @@ li {
 
 .container_header.lateral {
     display: flex;
-    /* flex-direction: row; */
-    /* justify-content: space-between; */
-    /* height: 10vh; */
-    /* width: 100vw; */
-    max-width: 94.4%;
+    max-width: 100%;
     position: absolute;
-    /* flex-wrap: wrap; */
     background-color: #121212;
     border-radius: 6px 6px 0 0;
     padding-bottom: 10px;
@@ -115,8 +113,6 @@ li {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* height: 40%; */
-    /* width: 100%; */
     padding: 10px;
 }
 
@@ -124,7 +120,6 @@ li {
     display: flex;
     gap: 15px;
     align-items: flex-end;
-    /* flex-direction: row; */
     padding-left: 15px;
     margin: 7px;
 }
@@ -159,6 +154,7 @@ li {
 
 .sugestoes.container_lateral {
     padding-top: 90px;
+    max-width: 100%;
 }
 
 .lista_lateral.lista2 {
@@ -168,7 +164,7 @@ li {
     flex-direction: column;
 }
 
-.musica{
+.musica {
     display: block;
 }
 
@@ -201,7 +197,7 @@ li {
 
 .perfil_artista {
     background-color: #121212;
-    height: 97.5%;
+    height: 100%;
     width: 100%;
     min-width: 70vw;
     overflow-y: auto;
@@ -213,7 +209,6 @@ li {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-image: url(./imagens/banner-kanye2.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 5px 5px 0 0;
@@ -367,7 +362,6 @@ li {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    list-style:decimal;
 
 }
 
@@ -383,7 +377,7 @@ li {
     color: white;
 }
 
-.texto_padrao.duracao{
+.texto_padrao.duracao {
     min-width: fit-content;
 }
 
@@ -404,12 +398,9 @@ li {
 
 
 .menu_central {
-    --largura_menu_central:auto;
-    width: var(--largura_menu_central);
     background-color: black;
-    display: flex;
-    height: 90vh;
-    flex-wrap: wrap;
+    height: 87vh;
+
 }
 
 .menu_central_principal {
@@ -534,9 +525,90 @@ li {
 }
 
 .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 1 / span 2;
+    max-height: fit-content;
+}
+
+.container_reproduzindo {
+    display: flex
+}
+
+.container_imagem.footer {
+    justify-content: center;
     display: flex;
+    margin-right: 5px;
+
+}
+
+.container_infos_musica.footer {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+}
+
+.container_infos_musica.footer:hover {
+    text-decoration: underline;
+}
+
+.icone_footer {
+    border-radius: 5px;
+    height: 70px;
+}
+
+.like_container{
+    padding-left: 20px;
+}
+.botoes-controle {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.play-pause {
+    display: inline-block;
+    padding: 1em;
+    background-color: #ddd;
+    color: #111;
+    border-radius: 50%;
+}
+
+.play-pause:hover {
+    transform: scale(1.1);
+    color: #111;
+}
+
+.fas::before {
     height: 100px;
+}
+
+.barra_controle{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.barra_de_progresso{
+    height: 4px;
+    border-radius: 10px;
+    width: 40%;
+    background-color: #ccc4;
+}
+.progresso{
+    position: relative;
+    height: 100%;
+    width: 30%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.progresso:hover{
+    background-color: #1DB954;
 }
 
 @media (min-width:940px) {
@@ -545,9 +617,10 @@ li {
     }
 }
 
-@media (max-width:940px)
-{
-    .menu_maisOuvidas .texto_padrao.visualizacoes{
+@media (max-width:940px) {
+    .menu_maisOuvidas .texto_padrao.visualizacoes {
         display: none;
     }
 }
+
+.footer{}

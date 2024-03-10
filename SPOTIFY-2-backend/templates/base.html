@@ -7,21 +7,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify 2</title>
-    <link rel="shortcut icon" type="imagex/ico" href="./imagens/Spotify.ico">
+    <link rel="shortcut icon" type="imagex/ico" href="{%static 'imagens/spotify.ico'%}">
     <link rel="stylesheet" href="{%static 'index.css'%}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
 
 </head>
 
 <body>
+    <script src="{%static 'script.js'%}"></script>
     <div class="container_principal">
        {%include 'partials/_menu_lateral.html'%} 
        <section class="menu_central">
             {%block content%}
             {%endblock%}
        </section>   
+       {%include 'partials/_footer.html'%}
     </div>
 
 </body>

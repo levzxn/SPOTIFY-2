@@ -1,18 +1,19 @@
 from django.db import models
+import random
 
 class Artista(models.Model):
     nome_artista = models.CharField(max_length=30)
     icone_artista = models.ImageField(upload_to="fotos/%Y/%m/%d",blank=True)
     banner_artista = models.ImageField(upload_to="fotos/%Y/%m/%d",blank=True)
     background_gradient = models.CharField(max_length=200,blank=True)
-    vizualizacoes_mensais = models.IntegerField()
+    visualizacoes_mensais = models.IntegerField()
 
     def __str__(self):
         return self.nome_artista
     
     @property
-    def vizualizacoes_formatadas(self):
-        v_format =  f'{self.vizualizacoes_mensais:,.0f}'
+    def visualizacoes_formatadas(self):
+        v_format =  f'{self.visualizacoes_mensais:,.0f}'
         return v_format.replace(',','.')
 
 class Album(models.Model):
@@ -23,10 +24,18 @@ class Album(models.Model):
 
     def __str__(self):
         return self.titulo_album
+    
+    def get_random_albuns(num):
+        albuns = Album.objects.all()
+        random_albuns = []
+        albuns_indices = random.sample(range(0, len(albuns)), num)
+        for indice in albuns_indices: 
+            random_albuns.append(albuns[indice])
+        return random_albuns
 
 class Musica(models.Model):
     titulo_musica = models.CharField(max_length=30)
-    vizualizacoes_musica = models.IntegerField()
+    visualizacoes_musica = models.IntegerField()
     album = models.ForeignKey(Album,on_delete=models.CASCADE)
     duracao = models.DurationField()
 
@@ -45,3 +54,16 @@ class Musica(models.Model):
             return f'{horas}:{minutos}:{segundos_f}'
         else:
             return f'{minutos}:{segundos_restantes}'
+        
+    @property
+    def visualizacoes_formatadas(self):
+        v_format =  f'{self.visualizacoes_musica:,.0f}'
+        return v_format.replace(',','.')
+    
+    def get_random_musicas(num):
+        musicas = Musica.objects.all()
+        random_musicas = []
+        musica_indices = random.sample(range(0, len(musicas)), num)
+        for indice in musica_indices: 
+            random_musicas.append(musicas[indice])
+        return random_musicas
