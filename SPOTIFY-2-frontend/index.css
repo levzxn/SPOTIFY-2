@@ -23,9 +23,11 @@ i:hover{
 .container_principal {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr;
-    padding: 10px;
-    gap: 10px;
+    grid-template-rows: auto;
+    padding: 0.5vw 0.5vh;
+    gap: 0.5vw 0.5vh;
+    height: 100%;
+    min-height: 100%;
 }
 
 ul {
@@ -100,13 +102,8 @@ li {
 
 .container_header.lateral {
     display: flex;
-    /* flex-direction: row; */
-    /* justify-content: space-between; */
-    /* height: 10vh; */
-    /* width: 100vw; */
-    max-width: 94.4%;
+    max-width: 100%;
     position: absolute;
-    /* flex-wrap: wrap; */
     background-color: #121212;
     border-radius: 6px 6px 0 0;
     padding-bottom: 10px;
@@ -116,8 +113,6 @@ li {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* height: 40%; */
-    /* width: 100%; */
     padding: 10px;
 }
 
@@ -536,8 +531,8 @@ li {
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column: 1/ span 2;
-    min-height: 8.6vh;
+    grid-column: 1 / span 2;
+    max-height: fit-content;
 }
 
 .container_reproduzindo {
@@ -545,9 +540,8 @@ li {
 }
 
 .container_imagem.footer {
-    justify-content: flex-start;
+    justify-content: center;
     display: flex;
-    max-width: fit-content;
     margin-right: 5px;
 
 }
