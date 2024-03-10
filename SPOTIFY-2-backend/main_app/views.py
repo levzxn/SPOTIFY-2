@@ -5,6 +5,7 @@ def index(request):
     albuns = Album.get_random_albuns(6)
     musicas = Musica.get_random_musicas(8)
     dados = {'albuns':albuns,'musicas':musicas}
+    
     return render(request,'index.html',{'dados':dados})
 
 def artista(request,nome_art):
