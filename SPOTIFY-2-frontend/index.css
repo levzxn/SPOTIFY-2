@@ -24,8 +24,8 @@ i:hover{
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: auto;
-    padding: 0.5vw 0.5vh;
-    gap: 0.5vw 0.5vh;
+    padding: 0.3vw 0.3vh;
+    gap: 0.3vw 0.3vh;
     height: 100vh;
     min-height: 100%;
     box-sizing: border-box;
@@ -59,9 +59,9 @@ li {
 .container_lateral.container1 {
     background-color: #121212;
     display: flex;
-    /* justify-content: space-between; */
     width: 100%;
     border-radius: 6px;
+    height: 12%;
 }
 
 
@@ -70,22 +70,18 @@ li {
 }
 
 .lista_lateral.lista1 {
-    /* color: #b3b3b3; */
-    /* display: flex; */
     justify-content: center;
     flex-direction: column;
-    /* align-content: stretch; */
-    /* align-items: flex-start; */
     padding: 10px;
     width: 90%;
 }
 
 .container_lateral.container2 {
     background-color: rgb(18, 18, 18);
-    height: 87.5%;
     width: 100%;
     border-radius: 6px;
     overflow-y: auto;
+    height: 87%;
 }
 
 .container_lateral.container2::-webkit-scrollbar {
@@ -120,7 +116,6 @@ li {
     display: flex;
     gap: 15px;
     align-items: flex-end;
-    /* flex-direction: row; */
     padding-left: 15px;
     margin: 7px;
 }
@@ -155,6 +150,7 @@ li {
 
 .sugestoes.container_lateral {
     padding-top: 90px;
+    max-width: 100%;
 }
 
 .lista_lateral.lista2 {
@@ -399,12 +395,9 @@ li {
 
 
 .menu_central {
-    --largura_menu_central: auto;
-    width: var(--largura_menu_central);
     background-color: black;
-    display: flex;
     height: 87vh;
-    flex-wrap: wrap;
+
 }
 
 .menu_central_principal {
