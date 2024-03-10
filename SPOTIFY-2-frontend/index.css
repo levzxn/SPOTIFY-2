@@ -21,8 +21,6 @@ i:hover{
 }
 
 .container_principal {
-    height: 100%;
-    width: 98.8%;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: auto;
@@ -47,7 +45,7 @@ li {
 .menu_lateral {
     background-color: black;
     display: flex;
-    height: 85vh;
+    height:87vh;
     flex-wrap: wrap;
     position: relative;
     max-width: 100%;
@@ -411,7 +409,7 @@ li {
     width: var(--largura_menu_central);
     background-color: black;
     display: flex;
-    height: 85vh;
+    height: 87vh;
     flex-wrap: wrap;
 }
 
@@ -548,9 +546,9 @@ li {
 }
 
 .container_imagem.footer {
-    width: 100px;
     justify-content: center;
     display: flex;
+    margin-right: 5px;
 
 }
 
@@ -566,8 +564,7 @@ li {
 
 .icone_footer {
     border-radius: 5px;
-    width: 80px;
-    height: 80px;
+    height: 70px;
 }
 
 .like_container{
