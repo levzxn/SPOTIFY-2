@@ -47,7 +47,7 @@ li {
 .menu_lateral {
     background-color: black;
     display: flex;
-    height: 87vh;
+    height: 85vh;
     flex-wrap: wrap;
     position: relative;
     max-width: 100%;
@@ -411,7 +411,7 @@ li {
     width: var(--largura_menu_central);
     background-color: black;
     display: flex;
-    height: 87vh;
+    height: 85vh;
     flex-wrap: wrap;
 }
 
