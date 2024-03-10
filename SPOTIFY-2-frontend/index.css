@@ -20,15 +20,15 @@
         color: #ddd;
     }
 
-    .container_principal {
-        height: 100%;
-        width: 98.9%;
-        display: grid;
-        grid-template-columns: 1fr 4fr;
-        grid-template-rows: auto;
-        padding: 10px;
-        gap: 10px;
-    }
+.container_principal {
+    height: 100%;
+    width: 98.9%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr auto;
+    padding: 10px;
+    gap: 10px;
+}
 
     ul {
         list-style: none;
@@ -536,92 +536,7 @@
         margin: 20px;
     }
 
-    .footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column: 1 / span 2;
-    }
-
-    .container_reproduzindo {
-        display: flex
-    }
-
-    .container_imagem.footer {
-        width: 100px;
-        justify-content: center;
-        display: flex;
-
-    }
-
-    .container_infos_musica.footer {
-        display: flex;
-        align-items: center;
-        max-width: fit-content;
-    }
-
-    .container_infos_musica.footer:hover {
-        text-decoration: underline;
-    }
-
-    .icone_footer {
-        border-radius: 5px;
-        width: 80px;
-        height: 80px;
-    }
-
-    .like_container{
-        padding-left: 20px;
-    }
-    .botoes-controle {
-        display: flex;
-        align-items: center;
-        gap: 2em;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-
-    .play-pause {
-        display: inline-block;
-        padding: 1em;
-        background-color: #ddd;
-        color: #111;
-        border-radius: 50%;
-    }
-
-    .play-pause:hover {
-        transform: scale(1.1);
-        color: #111;
-    }
-
-    .fas::before {
-        height: 100px;
-    }
-
-    .barra_controle{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1em;
-    }
-    .barra_de_progresso{
-        height: 4px;
-        border-radius: 10px;
-        width: 40%;
-        background-color: #ccc4;
-    }
-    .progresso{
-        position: relative;
-        height: 100%;
-        width: 30%;
-        border-radius: 10px;
-        background-color: white;
-    }
-
-    .progresso:hover{
-        background-color: #1DB954;
-    }
+.footer {}
 
     @media (min-width:940px) {
         .menu_central_recentes {

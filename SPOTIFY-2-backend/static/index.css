@@ -1,21 +1,29 @@
+@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+
 * {
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 100;
-    font-size: 15px;
+    font-family: "circular std book", sans-serif;
     color: #b3b3b3;
 }
 
 body {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
+}
+
+a{
+    text-decoration: none;
 }
 
 .container_principal {
     height: 100%;
-    width: 100%;
-    display: flex;
+    width: 98.9%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto;
+    padding: 10px;
+    gap: 10px;
 }
 
 ul {
@@ -35,14 +43,12 @@ li {
 .menu_lateral {
     background-color: black;
     display: flex;
-    width: 400px;
     height: 90vh;
-    /* justify-content: space-between; */
     flex-wrap: wrap;
-    /* border-radius: 5px; */
-    padding: 10px;
     position: relative;
+    max-width: 100%;
 }
+
 
 .container_lateral.container1 {
     background-color: #121212;
@@ -73,7 +79,7 @@ li {
     background-color: #121212;
     /* display: flex; */
     height: 80%;
-    /* width: 100%; */
+    width: 100%;
     border-radius: 6px;
     /* flex-direction: column; */
     overflow-y: auto;
@@ -159,6 +165,11 @@ li {
     /* display: flex; */
     flex-wrap: wrap;
     padding: 7px;
+    flex-direction: column;
+}
+
+.musica{
+    display: block;
 }
 
 .container_musica {
@@ -202,6 +213,7 @@ li {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    background-image: url(./imagens/banner-kanye2.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 5px 5px 0 0;
@@ -315,8 +327,8 @@ li {
 }
 
 .menu_maisOuvidas {
-    width: 100%;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(20px, 1fr));
     background: rgb(42, 11, 6);
     background: linear-gradient(180deg, rgba(42, 11, 6, 1) 10%, rgba(18, 18, 18, 1) 51%);
 }
@@ -355,6 +367,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    list-style:decimal;
 
 }
 
@@ -368,6 +381,10 @@ li {
 .texto_padrao {
     min-width: 150px;
     color: white;
+}
+
+.texto_padrao.duracao{
+    min-width: fit-content;
 }
 
 .numero_padrao {
@@ -385,14 +402,14 @@ li {
     display: flex;
 }
 
+
 .menu_central {
+    --largura_menu_central:auto;
+    width: var(--largura_menu_central);
     background-color: black;
     display: flex;
-    width: 100vw;
     height: 90vh;
     flex-wrap: wrap;
-    padding: 10px;
-    padding-left: 0px;
 }
 
 .menu_central_principal {
@@ -405,7 +422,7 @@ li {
 .menu_central_header {
     display: flex;
     padding: 16px;
-    width: 100%;
+    width: 10%;
     position: fixed;
     background-color: #121212;
 }
@@ -415,8 +432,7 @@ li {
     gap: 10px;
 }
 
-.botoes_header_central.direita{
-}
+.botoes_header_central.direita {}
 
 .menu_central_recentes {
     display: grid;
@@ -433,89 +449,105 @@ li {
     background-color: #252323;
     justify-content: flex-start;
     border-radius: 6px;
-    box-shadow: rgb(0, 0, 0) 0px 5px 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.container_albuns{
+.container_albuns {
     margin: 10px;
 }
 
-.container_h2_albuns{}
+.container_h2_albuns {}
 
-.texto_padrao.nome_container{
+.texto_padrao.nome_container {
     font-size: 30px;
 }
 
-.texto_padrao.titulo_album{
-
+.texto_padrao.titulo_album {
+    margin-top: 10px;
 }
 
-.albuns{
+.albuns {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    min-width: 400px;
+    gap: 10px
 }
 
-.album{
+.album {
     padding: 10px;
     width: fit-content;
 }
 
-.icone_album{
+.icone_album {
     width: 200px;
     border-radius: 5px;
 }
 
-.icone_album.artista{
+.icone_album.artista {
     width: 100%;
-    height: 100%;
-    border-radius: 100%;
+    border-radius: 50%;
+    max-height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.container_imagem.conteudo{
+.container_imagem.conteudo {
+    width: 200px;
+    height: 200px;
 }
 
-.menu_central_escolhas{
+.menu_central_escolhas {
     padding: 20px;
 }
 
-.capas_escolhas{
+.capas_escolhas {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     margin-top: 15px;
     gap: 15px;
 }
 
-.container_capa_conteudo{
+.container_capa_conteudo {
     width: 100%;
     background-color: #252323;
     border-radius: 5px;
     display: flex;
     align-items: flex-start;
-    box-shadow: rgb(0, 0, 0) 0px 5px 15px;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 
-.texto_menu_escolhas h2{
+.texto_menu_escolhas h2 {
     color: white;
     font-size: 1.5rem;
 }
 
 
-.texto_padrao.informacoes{
+.texto_padrao.informacoes {
     margin-top: 3%;
     color: #b3b3b3;
     font-size: 12px;
 }
 
-.capa_conteudo{
+.capa_conteudo {
     margin: 20px;
 }
 
-@media (min-width:940px) {
-    .menu_central_recentes{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-    
-    
+.footer {
+    display: flex;
+    height: 100px;
+    width: 100%;
 }
 
+@media (min-width:940px) {
+    .menu_central_recentes {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width:940px)
+{
+    .menu_maisOuvidas .texto_padrao.visualizacoes{
+        display: none;
+    }
+}
