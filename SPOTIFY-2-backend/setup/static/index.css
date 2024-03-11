@@ -259,6 +259,10 @@ li {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.imagem_icone_artista.quadrada{
+    border-radius: 0;
+}
+
 .nome_artista {
     margin: 0;
     font-size: 6rem;
@@ -319,6 +323,7 @@ li {
     display: flex;
     padding-bottom: 10px;
     font-size: 30px;
+    color: white;
 }
 
 .menu_maisOuvidas {
@@ -568,6 +573,10 @@ li {
     flex-wrap: wrap;
 }
 
+.botao_like{
+    width: 30px;
+    background-color: transparent;
+}
 
 .play-pause {
     display: inline-block;
