@@ -77,16 +77,18 @@
         </div>
         <div class="sugestoes container_lateral">
             <ul class="lista_lateral lista2">
+                {%for musica in menu_lateral.musicas%}
                 <li class="musica">
                     <div class="container_musica musica1">
                         <a href="teste.com"></a>
-                        <img class="imagem album1" src="imagens/kanye-capa1.jpeg" alt="capa" width="20px"
+                        <img class="imagem album1" src="/media/{{musica.album.foto_album}}" alt="capa" width="20px"
                             height="20px">
                         <div class="container_infos_musica">
-                            <p class="titulo_musica">VULTURES 1</p>
-                            <p class="descricao_musica">Álbum • Kanye West</p>
+                            <p class="titulo_musica">{{musica.titulo_musica}}</p>
+                            <p class="descricao_musica">Álbum • {{musica.album.artista}}</p>
                         </div>
                 </li>
+                {%endfor%}
             </ul>
         </div>
     </div>
