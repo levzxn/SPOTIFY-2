@@ -14,7 +14,7 @@ def artista(request,nome_art):
     musicas_artista = Musica.objects.filter(album__artista=artista).order_by('-visualizacoes_musica')
     numeros = [1,2,3,4,5,6,7,8,9,10]
     dados = {'numeros':numeros,'artista':artista,'albuns':albuns_artista,"musicas":musicas_artista}
-
+    print(artista.icone_artista)
     return render(request,'artistapage.html',{'dados':dados})
 
 def album(request,nome_alb):

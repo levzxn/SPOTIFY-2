@@ -3,9 +3,8 @@ import random
 
 class Artista(models.Model):
     nome_artista = models.CharField(max_length=30)
-    icone_artista = models.ImageField(upload_to="fotos/%Y/%m/%d",blank=True)
+    icone_artista = models.ImageField(upload_to="fotos/%Y/%m/%d",blank=True,null=True)
     banner_artista = models.ImageField(upload_to="fotos/%Y/%m/%d",blank=True)
-    background_gradient = models.CharField(max_length=200,blank=True)
     visualizacoes_mensais = models.IntegerField()
 
     def __str__(self):
