@@ -175,11 +175,12 @@ li {
     /* text-align: center; */
 }
 
-.imagem.album1 {
+.imagem {
     width: 55px;
     height: 55px;
     border-radius: 5px;
 }
+
 
 .titulo_musica {
     font-size: 18px;

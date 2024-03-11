@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <script src="script.js"></script>
+
     <div class="container_principal">
         <section class="menu_lateral">
             <div class="container_lateral container1">
@@ -462,13 +462,17 @@
                     </div>
                 </div>
             </div>
+            <audio id="audio_player" controls style="display: none;">
+                <source src="./media/YunkVino-Fim.mp3" type="audio/mpeg">
+              </audio>
             <div class="botoes-controle">
                 <i class="fas fa-random"></i>
                 <i class="fas fa-step-backward"></i>
-                <i class="play-pause fas fa-play"></i>
+                <button style="background-color: transparent;" onclick="playPause()">
+                    <i class="play-pause fas fa-play"></i>
+                </button>
                 <i class="fas fa-step-forward"></i>
                 <i class="fas fa-undo-alt"></i>
-
             </div>
             <div class="barra_controle">
                 <span>0:49</span>
@@ -479,9 +483,7 @@
             </div>
         </footer>
     </div>
-
-
-
+    <script src="script.js"></script>
 </body>
 
 </html>

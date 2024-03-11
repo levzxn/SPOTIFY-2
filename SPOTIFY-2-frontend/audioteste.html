@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reprodução de Áudio Simples</title>
+</head>
+<body>
+
+<audio id="audioPlayer" controls style="display: none;">
+  <source src="./media/YunkVino-Fim.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="playAudio()">Play</button>
+<button onclick="pauseAudio()">Pause</button>
+<button onclick="stopAudio()">Stop</button>
+
+<script>
+    const audio = document.getElementById('audioPlayer');
+    
+    function playAudio() {
+        audio.play();
+    }
+
+    function pauseAudio() {
+        audio.pause();
+    }
+
+    function stopAudio() {
+        audio.pause();
+        audio.currentTime = 0;
+    }
+</script>
+
+</body>
+</html>
