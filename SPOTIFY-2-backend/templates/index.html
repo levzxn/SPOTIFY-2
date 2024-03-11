@@ -37,7 +37,8 @@
             {%for musica in dados.musicas%}
             <div class="container_musica_central musica1">
                 <a href="teste.com"></a>
-                <img class="imagem album1" src="/media/{{musica.album.foto_album}}" alt="capa" width="20px" height="20px">
+                <img class="imagem album1" src="/media/{{musica.album.foto_album}}" alt="capa" width="20px"
+                    height="20px">
                 <div class="container_infos_musica">
                     <p class="titulo_musica">{{musica.titulo_musica}}</p>
                 </div>
@@ -53,15 +54,18 @@
             <div class="capas_escolhas">
                 {%for album in dados.albuns%}
                 <div class="container_capa_conteudo">
-                    <div class="capa_conteudo">
-                        <div class="container_imagem conteudo">
-                            <img class="icone_album playlist" src="/media/{{album.foto_album}}">
-                        </div>
-                        <a href="{%url 'album' album.titulo_album%}">
+                    <a href="{%url 'album' album.titulo_album%}">
+                        <div class="capa_conteudo">
+                            <div class="container_imagem conteudo">
+                                <img class="icone_album playlist" src="/media/{{album.foto_album}}">
+                            </div>
+
                             <p class="texto_padrao titulo_album">{{album.titulo_album}}</p>
-                        </a>
-                        <a class="texto_padrao informacoes" href="{%url 'artista' album.artista.nome_artista%}">{{album.artista.nome_artista}}</a>
-                    </div>
+
+                            <a class="texto_padrao informacoes"
+                                href="{%url 'artista' album.artista.nome_artista%}">{{album.artista.nome_artista}}</a>
+                        </div>
+                    </a>
                 </div>
                 {%endfor%}
             </div>
