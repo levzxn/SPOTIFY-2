@@ -539,7 +539,8 @@ li {
 .container_imagem.footer {
     justify-content: center;
     display: flex;
-    margin-right: 5px;
+    margin-right: 10px;
+    margin-left: 15px;
 
 }
 
@@ -559,7 +560,7 @@ li {
 }
 
 .like_container{
-    padding-left: 20px;
+    padding-left: 30px;
 }
 .botoes-controle {
     display: flex;
