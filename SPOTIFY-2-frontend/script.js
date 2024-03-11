@@ -34,12 +34,29 @@ function ajustarPadding() {
     $('.sugestoes.container_lateral').css('padding-top', alturaHeader + 'px');
 }
 
+{{}}
+
+function ajustarFonte(){
+    var tamanhoJanela = $('.container_principal').width()
+    var proporcao = tamanhoJanela / 350;
+    var tamanhoFonte = proporcao + 'rem';
+    if (proporcao <= 3.5){
+        $('.nome_artista').css('font-size','3.5rem')
+    }
+    else{
+        $('.nome_artista').css('font-size',tamanhoFonte)
+    }
+
+
+}
 
 $(document).ready(function () {
     ajustarPadding();
+    ajustarFonte();
 
     $(window).resize(function () {
         ajustarPadding();
+        ajustarFonte();
     });
 
     var bgImageUrl = $('.banner').css('background-image');
