@@ -128,78 +128,68 @@ function ajustarFonte() {
 
 
 }
+class ReprodutorMusica {
+    constructor() {
+        this.audioEmReproducao = null;
+        this.listaBotoes = document.querySelectorAll('.reprodutor');
+        this.listaBotoesCircular = new Ldesc();
+        this.configurarEventos();
+    }
 
-function getDadosMusica(nomeArtista, fotoMusica, tituloMusica) {
-    let imagemFooter = document.querySelector('.icone_footer');
-    let nomeMusicaFooter = document.querySelector('.nome_musica_footer');
-    let nomeArtistaFooter = document.querySelector('.nome_artista_footer');
-    imagemFooter.src = fotoMusica.src;
-    console.log(fotoMusica)
-}
+    configurarEventos() {
+        this.listaBotoes.forEach((botao) => {
+            const audioMusica = botao.classList[1];
+            const audioId = `#audio_${audioMusica}`;
 
-function playPause(audio) {
-    let playPauseButton = document.querySelector('.play-pause');
-    if (audio.paused) {
-        audio.play();
-        playPauseButton.classList.remove('fas', 'fa-play');
-        playPauseButton.classList.add('fas', 'fa-pause');
-    } else {
+            botao.onclick = () => this.iniciarReproducao(botao, audioId);
+        });
+    }
+
+    iniciarReproducao(botao, audioId) {
+        const audio = document.querySelector(audioId);
+        if (this.audioEmReproducao && this.audioEmReproducao !== audio) {
+            this.pararAudio(this.audioEmReproducao);
+        }
+        this.playPause(audio);
+        this.audioEmReproducao = audio;
+
+        const imagemMusica = botao.querySelector('img');
+        const nomeArtista = document.querySelector('.nome_artista');
+        const nomeMusica = botao.querySelector('.texto_padrao.titulo_musica');
+
+        this.atualizarDadosMusica(imagemMusica, nomeArtista, nomeMusica);
+    }
+
+    playPause(audio) {
+        const playPauseButton = document.querySelector('.play-pause');
+        if (audio.paused) {
+            audio.play();
+            playPauseButton.classList.remove('fas', 'fa-play');
+            playPauseButton.classList.add('fas', 'fa-pause');
+        } else {
+            audio.pause();
+            playPauseButton.classList.remove('fas', 'fa-pause');
+            playPauseButton.classList.add('fas', 'fa-play');
+        }
+    }
+
+    pararAudio(audio) {
         audio.pause();
-        playPauseButton.classList.remove('fas', 'fa-pause');
-        playPauseButton.classList.add('fas', 'fa-play');
+        audio.currentTime = 0;
+    }
+
+    atualizarDadosMusica(imagemMusica, nomeArtista, nomeMusica) {
+        const imagemFooter = document.querySelector('.icone_footer');
+        const nomeMusicaFooter = document.querySelector('.nome_musica_footer');
+        const nomeArtistaFooter = document.querySelector('.nome_artista_footer');
+
+        imagemFooter.src = imagemMusica.src;
+        nomeArtistaFooter.innerHTML = nomeArtista.innerHTML;
+        nomeMusicaFooter.innerHTML = nomeMusica.innerHTML;
     }
 }
 
-function pauseAudio(audio) {
-    audio.pause();
-}
-
-function stopAudio(audio) {
-    audio.pause();
-    audio.currentTime = 0;
-}
-
-function anteriorAudio(audio) {
-
-}
-
-let audioEmReproducao = null;
-
-
-function tocaSom(seletorAudio) {
-    const audio = document.querySelector(seletorAudio);
-    if (audioEmReproducao && audioEmReproducao !== audio) {
-        stopAudio(audioEmReproducao);
-    }
-    playPause(audio);
-    audioEmReproducao = audio;
-}
-
-
-
-const listaBotoes = document.querySelectorAll('.reprodutor')
-const listaBotoesCircular = new Ldesc()
-
-for (let contador = 0; contador<listaBotoes.length; contador++){
-    listaBotoesCircular.inserirFim(listaBotoes[contador])
-}
-
-
-for (let contador = 0; contador < listaBotoes.length; contador++) {
-    const musica = listaBotoes[contador];
-    const audioMusica = musica.classList[1]
-    const audioId = `#audio_${audioMusica}`;
-
-    musica.onclick = function () {
-        const imagemMusica = musica.querySelector('img')
-        const nomeArtista = document.getElementsByClassName('.nome_artista')
-        const nomeMusica = musica.getElementsByClassName('.texto_padrao.titulo_musica')
-        console.log(imagemMusica)
-        getDadosMusica(imagemMusica, nomeArtista, nomeMusica)
-        tocaSom(audioId)
-    }
-}
-
+const reprodutor = new ReprodutorMusica();
 
 
 $(document).ready(function () {
