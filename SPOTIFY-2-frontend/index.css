@@ -43,8 +43,6 @@ li {
     display: flex;
     gap: 15px;
     align-items: flex-end;
-    /* flex-direction: row; */
-    /* justify-self: center; */
     padding-left: 15px;
     margin: 7px;
 }
@@ -253,9 +251,7 @@ li {
 
 .imagem_icone_artista {
     width: 150px;
-    /* altura automática para manter a proporção da imagem */
     display: block;
-    /* para remover o espaço extra sob a imagem */
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -304,6 +300,10 @@ li {
     height: 58px;
     border-radius: 50%;
     background-color: #1DB954;
+}
+
+.botao_maisOuvidas.play.play svg path{
+    
 }
 
 .botao_maisOuvidas.seguindo {

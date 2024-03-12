@@ -1,30 +1,43 @@
-class No{
-    constructor(ant,info,prox){
+class No {
+    constructor(ant, info, prox) {
         this.info = info
         this.prox = prox
         this.ant = ant
     }
 }
 
-class Ldesc{
-    constructor(){
+class Ldesc {
+    constructor() {
         this.prim = null
         this.atual = null
         this.ult = null
-        this.quant = 0 
+        this.quant = 0
+    }
+
+    encontrarPorValor(valor) {
+        let aux = this.prim;
+        while (aux != null) {
+            if (aux.info == valor) {
+                return aux;
+            }
+            aux = aux.prox;
+            if (aux === this.prim) {
+                return null;
+            }
+        }
     }
 
     inserirFim(valor) {
         if (this.quant === 0) {
             this.prim = this.ult = new No(null, valor, null);
-            this.prim.prox = this.prim; 
-            this.prim.ant = this.prim; 
+            this.prim.prox = this.prim;
+            this.prim.ant = this.prim;
             this.quant++;
         } else {
             let novoNo = new No(this.ult, valor, this.prim);
-            this.ult.prox = novoNo; 
-            this.ult = novoNo; 
-            this.prim.ant = this.ult; 
+            this.ult.prox = novoNo;
+            this.ult = novoNo;
+            this.prim.ant = this.ult;
             this.quant++;
         }
     }
@@ -33,19 +46,19 @@ class Ldesc{
         if (this.quant === 0) {
             this.prim = this.ult = new No(null, valor, null);
             this.prim.prox = this.prim;
-            this.prim.ant = this.prim; 
+            this.prim.ant = this.prim;
             this.quant++;
         } else {
             let novoNo = new No(this.ult, valor, this.prim);
             this.prim.ant = novoNo;
-            novoNo.prox = this.prim; 
-            this.prim = novoNo; 
-            this.ult.prox = this.prim; 
+            novoNo.prox = this.prim;
+            this.prim = novoNo;
+            this.ult.prox = this.prim;
             this.quant++;
         }
     }
 
-    anteriorItem(){
+    anteriorItem() {
         this.atual = this.atual.ant
     }
 
@@ -53,22 +66,22 @@ class Ldesc{
         this.atual = this.atual.prox
     }
 
-    verAtual(){
+    verAtual() {
         return this.atual
     }
 
-    verLista(){
+    verLista() {
         var aux = this.prim
-        while(aux!=this.ult){
+        while (aux != this.ult) {
             console.log(aux.info)
             aux = aux.prox
         }
         console.log(this.ult.info)
     }
 
-    verCiclo(){
+    verCiclo() {
         var aux = this.prim
-        while(true){
+        while (true) {
             console.log(aux.info)
             aux = aux.prox
         }
@@ -128,79 +141,122 @@ function ajustarFonte() {
 
 
 }
+class ReprodutorMusica {
+    constructor() {
+        this.audioEmReproducao = null;
+        this.listaBotoes = document.querySelectorAll('.reprodutor');
+        this.listaBotoesCircular = new Ldesc();
+        this.configurarEventos();
+    }
 
-function getDadosMusica(nomeArtista, fotoMusica, tituloMusica) {
-    let imagemFooter = document.querySelector('.icone_footer');
-    let nomeMusicaFooter = document.querySelector('.nome_musica_footer');
-    let nomeArtistaFooter = document.querySelector('.nome_artista_footer');
-    imagemFooter.src = fotoMusica.src;
-    console.log(fotoMusica)
-}
+    
 
-function playPause(audio) {
-    let playPauseButton = document.querySelector('.play-pause');
-    if (audio.paused) {
-        audio.play();
-        playPauseButton.classList.remove('fas', 'fa-play');
-        playPauseButton.classList.add('fas', 'fa-pause');
-    } else {
+    configurarEventos() {
+        this.listaBotoes.forEach((botao) => {
+            const audioId = this.fatiarId(botao)
+            this.listaBotoesCircular.inserirFim(botao)
+            console.log(this.listaBotoesCircular)
+
+            botao.onclick = () => this.reproduzirClicada(botao, audioId);
+        });
+    }
+
+
+    fatiarId(botaoaFatiar){
+        const audioMusica = botaoaFatiar.classList[1];
+        const audioId = `#audio_${audioMusica}`;   
+        return (audioId)         
+    }
+
+    reproduzirClicada(botao, audioId) {
+        this.listaBotoesCircular.atual = this.listaBotoesCircular.encontrarPorValor(botao)
+        this.manipularAudio()
+        this.atualizarDadosMusica()
+
+    }
+
+    reproduzirLista() {
+        if (this.listaBotoesCircular.atual == null) {
+            this.listaBotoesCircular.atual = this.listaBotoesCircular.prim
+        }
+        this.manipularAudio()
+    }
+    
+    manipularAudio(){
+        const botao = this.listaBotoesCircular.atual.info              
+        const audioId = this.fatiarId(botao)
+        const audio = document.querySelector(audioId);
+        if (audio == null){
+            return null
+        }
+        else{
+            if (this.audioEmReproducao && this.audioEmReproducao !== audio) {
+            this.pararAudio(this.audioEmReproducao);
+            }
+        this.audioEmReproducao.addEventListener('ended', () => {
+            return true
+        });
+        this.playPause(audio);
+        this.audioEmReproducao = audio
+        }
+    }
+
+        
+    avancarMusica(){
+        if(this.listaBotoesCircular.atual == null){
+            return console.log('kkk')
+        }        
+        this.listaBotoesCircular.proximoItem()
+        this.manipularAudio()
+        this.atualizarDadosMusica()
+    }
+
+    voltarMusica(){
+        if(this.listaBotoesCircular.atual == null){
+            return console.log('kkk')
+        }        
+        this.listaBotoesCircular.proximoItem()
+        this.manipularAudio()         
+
+    }
+
+    playPause(audio) {
+        console.log(audio.currentTime)
+        const playPauseButton = document.querySelector('.play-pause');
+        if (audio.paused) {
+            audio.play();
+            playPauseButton.classList.remove('fas', 'fa-play');
+            playPauseButton.classList.add('fas', 'fa-pause');
+        } else {
+            audio.pause();
+            playPauseButton.classList.remove('fas', 'fa-pause');
+            playPauseButton.classList.add('fas', 'fa-play');
+        }
+        this.atualizarDadosMusica()
+    }
+
+    
+    pararAudio(audio) {
         audio.pause();
-        playPauseButton.classList.remove('fas', 'fa-pause');
-        playPauseButton.classList.add('fas', 'fa-play');
+        audio.currentTime = 0;
     }
-}
 
-function pauseAudio(audio) {
-    audio.pause();
-}
-
-function stopAudio(audio) {
-    audio.pause();
-    audio.currentTime = 0;
-}
-
-function anteriorAudio(audio) {
-
-}
-
-let audioEmReproducao = null;
-
-
-function tocaSom(seletorAudio) {
-    const audio = document.querySelector(seletorAudio);
-    if (audioEmReproducao && audioEmReproducao !== audio) {
-        stopAudio(audioEmReproducao);
+    atualizarDadosMusica() {
+        const botao = this.listaBotoesCircular.atual.info
+        const imagemMusica = botao.querySelector('img');
+        const nomeArtista = document.querySelector('.nome_artista');
+        const nomeMusica = botao.querySelector('.texto_padrao.titulo_musica');
+        const imagemFooter = document.querySelector('.icone_footer');
+        const nomeMusicaFooter = document.querySelector('.nome_musica_footer');
+        const nomeArtistaFooter = document.querySelector('.nome_artista_footer');
+        imagemFooter.src = imagemMusica.src;
+        nomeArtistaFooter.innerHTML = nomeArtista.innerHTML;
+        nomeMusicaFooter.innerHTML = nomeMusica.innerHTML;
     }
-    playPause(audio);
-    audioEmReproducao = audio;
+
+
 }
-
-
-
-const listaBotoes = document.querySelectorAll('.reprodutor')
-const listaBotoesCircular = new Ldesc()
-
-for (let contador = 0; contador<listaBotoes.length; contador++){
-    listaBotoesCircular.inserirFim(listaBotoes[contador])
-}
-
-
-for (let contador = 0; contador < listaBotoes.length; contador++) {
-    const musica = listaBotoes[contador];
-    const audioMusica = musica.classList[1]
-    const audioId = `#audio_${audioMusica}`;
-
-    musica.onclick = function () {
-        const imagemMusica = musica.querySelector('img')
-        const nomeArtista = document.getElementsByClassName('.nome_artista')
-        const nomeMusica = musica.getElementsByClassName('.texto_padrao.titulo_musica')
-        console.log(imagemMusica)
-        getDadosMusica(imagemMusica, nomeArtista, nomeMusica)
-        tocaSom(audioId)
-    }
-}
-
-
+const reprodutor = new ReprodutorMusica();
 
 $(document).ready(function () {
     ajustarPadding();
