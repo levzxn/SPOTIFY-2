@@ -36,6 +36,7 @@ class Musica(models.Model):
     titulo_musica = models.CharField(max_length=30)
     visualizacoes_musica = models.IntegerField()
     album = models.ForeignKey(Album,on_delete=models.CASCADE)
+    audio_mp3 = models.FileField(upload_to="musicas/%Y/%m/%d",blank=True)
     duracao = models.DurationField()
 
     def __str__(self):
