@@ -281,7 +281,7 @@
         </section>
         <section class="menu_central">
             <div class="perfil_artista">
-                <div class="banner" style="background-image: url('./imagens/banner-matue.jpeg');">
+                <div class="banner" style="background-image: url('./imagens/banner-kanye2.jpg');">
                     <header class="menu_central_header">
                         <div class="botoes_header_central esquerda">
                             <button class="botao pequeno">
@@ -326,14 +326,14 @@
                                 </svg>
                                 <p class="texto texto_banner">Artista Verificado</p>
                             </div>
-                            <h1 class="nome_artista">Kanye West</h1>
+                            <h1 class="nome_artista">Derek</h1>
                             <p class="texto texto_banner">1.452.120 ouvintes mensais</p>
                         </div>
                     </div>
                 </div>
                 <div class="menu_maisOuvidas">
                     <div class="menu_botoes">
-                        <button class="botao_maisOuvidas play">
+                        <button class="botao_maisOuvidas play" onclick="reprodutor.reproduzirLista()">
                             <svg width="30px" heigth="30px" data-encore-id="icon" role="img" aria-hidden="true"
                                 viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE">
                                 <path
@@ -368,7 +368,8 @@
                                         </div>
                                     </li>
                                 </button>
-                                <button class="reprodutor flashing_lights" style="background-color: transparent; width: 100%;">
+                                <button class="reprodutor flashing_lights"
+                                    style="background-color: transparent; width: 100%;">
                                     <li class="musicas_maisOuvidas">
                                         <p class="numero_padrao">1</p>
                                         <div class="foto_titulo">
@@ -382,25 +383,12 @@
                                         </div>
                                     </li>
                                 </button>
-                                <button class="reprodutor flashing_lights" style="background-color: transparent; width: 100%;">
+                                <button class="reprodutor audio_teste"
+                                    style="background-color: transparent; width: 100%;">
                                     <li class="musicas_maisOuvidas">
                                         <p class="numero_padrao">1</p>
                                         <div class="foto_titulo">
-                                            <img class="imagem album2" src="imagens/kanye-capa3.jpeg" alt="capa"
-                                                width="20px" height="20px">
-                                        </div>
-                                        <div class="texto_musica">
-                                            <p class="texto_padrao titulo_musica">Flashing Lights</p>
-                                            <p class="texto_padrao visualizacoes">965.984.094</p>
-                                            <p class="texto_padrao duracao">4:20</p>
-                                        </div>
-                                    </li>
-                                </button>
-                                <button class="reprodutor flashing_lights" style="background-color: transparent; width: 100%;">
-                                    <li class="musicas_maisOuvidas">
-                                        <p class="numero_padrao">1</p>
-                                        <div class="foto_titulo">
-                                            <img class="imagem album2" src="imagens/kanye-capa3.jpeg" alt="capa"
+                                            <img class="imagem album2" src="imagens/kanye-capa1.jpeg" alt="capa"
                                                 width="20px" height="20px">
                                         </div>
                                         <div class="texto_musica">
@@ -463,24 +451,36 @@
                         <img class="icone_footer" src="imagens/derek-capa1.jpeg">
                     </div>
                     <div class="container_texto_musica">
-                        <p class ="nome_musica_footer">Essa Vadia Me Estiga</p>
+                        <p class="nome_musica_footer">Essa Vadia Me Estiga</p>
                         <p class="nome_artista_footer">Derek</p>
                     </div>
                     <div class="like_container">
-                        <svg data-encore-id="icon" fill="white" role="img" aria-hidden="true" viewBox="0 0 16 16" width="20px" height="20px" class="Svg-sc-ytk21e-0 dYnaPI"><path d="M1.69 2A4.582 4.582 0 0 1 8 2.023 4.583 4.583 0 0 1 11.88.817h.002a4.618 4.618 0 0 1 3.782 3.65v.003a4.543 4.543 0 0 1-1.011 3.84L9.35 14.629a1.765 1.765 0 0 1-2.093.464 1.762 1.762 0 0 1-.605-.463L1.348 8.309A4.582 4.582 0 0 1 1.689 2zm3.158.252A3.082 3.082 0 0 0 2.49 7.337l.005.005L7.8 13.664a.264.264 0 0 0 .311.069.262.262 0 0 0 .09-.069l5.312-6.33a3.043 3.043 0 0 0 .68-2.573 3.118 3.118 0 0 0-2.551-2.463 3.079 3.079 0 0 0-2.612.816l-.007.007a1.501 1.501 0 0 1-2.045 0l-.009-.008a3.082 3.082 0 0 0-2.121-.861z"></path></svg>
+                        <svg data-encore-id="icon" fill="white" role="img" aria-hidden="true" viewBox="0 0 16 16"
+                            width="20px" height="20px" class="Svg-sc-ytk21e-0 dYnaPI">
+                            <path
+                                d="M1.69 2A4.582 4.582 0 0 1 8 2.023 4.583 4.583 0 0 1 11.88.817h.002a4.618 4.618 0 0 1 3.782 3.65v.003a4.543 4.543 0 0 1-1.011 3.84L9.35 14.629a1.765 1.765 0 0 1-2.093.464 1.762 1.762 0 0 1-.605-.463L1.348 8.309A4.582 4.582 0 0 1 1.689 2zm3.158.252A3.082 3.082 0 0 0 2.49 7.337l.005.005L7.8 13.664a.264.264 0 0 0 .311.069.262.262 0 0 0 .09-.069l5.312-6.33a3.043 3.043 0 0 0 .68-2.573 3.118 3.118 0 0 0-2.551-2.463 3.079 3.079 0 0 0-2.612.816l-.007.007a1.501 1.501 0 0 1-2.045 0l-.009-.008a3.082 3.082 0 0 0-2.121-.861z">
+                            </path>
+                        </svg>
                     </div>
                 </div>
             </div>
             <audio id="audio_player" controls style="display: none;">
                 <source src="./media/YunkVino-Fim.mp3" type="audio/mpeg">
-              </audio>
+            </audio>
             <div class="botoes-controle">
                 <i class="fas fa-random"></i>
-                <i class="fas fa-step-backward"></i>
-                <button class="botao_footer play_pause" ="background-color: transparent;" onclick="playPause()">
+                <button style="background-color: transparent;" onclick="reprodutor.voltarMusica()">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+
+                <button class="botao_footer play_pause" style="background-color: transparent;"
+                    onclick="reprodutor.reproduzirLista()">
                     <i class="play-pause fas fa-play"></i>
                 </button>
-                <i class="fas fa-step-forward"></i>
+                <button style="background-color: transparent;" onclick="reprodutor.avancarMusica()">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+
                 <i class="fas fa-undo-alt"></i>
             </div>
             <div class="barra_controle">
@@ -494,11 +494,13 @@
     </div>
     <audio id="audio_flashing_lights" controls style="display: none;">
         <source src="./media/YunkVino-Fim.mp3" type="audio/mpeg">
-      </audio>      
-    <script src="script.js"></script>
+    </audio>
     <audio id="audio_anos_luz" controls style="display: none;">
         <source src="./media/Matue-AnosLuz.mp3" type="audio/mpeg">
-      </audio>      
+    </audio>
+    <audio id="audio_audio_teste" controls style="display: none;">
+        <source src="./media/testeaudio.mp3" type="audio/mpeg">
+    </audio>
     <script src="script.js"></script>
 </body>
 

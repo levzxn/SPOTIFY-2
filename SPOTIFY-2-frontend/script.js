@@ -1,30 +1,43 @@
-class No{
-    constructor(ant,info,prox){
+class No {
+    constructor(ant, info, prox) {
         this.info = info
         this.prox = prox
         this.ant = ant
     }
 }
 
-class Ldesc{
-    constructor(){
+class Ldesc {
+    constructor() {
         this.prim = null
         this.atual = null
         this.ult = null
-        this.quant = 0 
+        this.quant = 0
+    }
+
+    encontrarPorValor(valor) {
+        let aux = this.prim;
+        while (aux != null) {
+            if (aux.info == valor) {
+                return aux;
+            }
+            aux = aux.prox;
+            if (aux === this.prim) {
+                return null;
+            }
+        }
     }
 
     inserirFim(valor) {
         if (this.quant === 0) {
             this.prim = this.ult = new No(null, valor, null);
-            this.prim.prox = this.prim; 
-            this.prim.ant = this.prim; 
+            this.prim.prox = this.prim;
+            this.prim.ant = this.prim;
             this.quant++;
         } else {
             let novoNo = new No(this.ult, valor, this.prim);
-            this.ult.prox = novoNo; 
-            this.ult = novoNo; 
-            this.prim.ant = this.ult; 
+            this.ult.prox = novoNo;
+            this.ult = novoNo;
+            this.prim.ant = this.ult;
             this.quant++;
         }
     }
@@ -33,19 +46,19 @@ class Ldesc{
         if (this.quant === 0) {
             this.prim = this.ult = new No(null, valor, null);
             this.prim.prox = this.prim;
-            this.prim.ant = this.prim; 
+            this.prim.ant = this.prim;
             this.quant++;
         } else {
             let novoNo = new No(this.ult, valor, this.prim);
             this.prim.ant = novoNo;
-            novoNo.prox = this.prim; 
-            this.prim = novoNo; 
-            this.ult.prox = this.prim; 
+            novoNo.prox = this.prim;
+            this.prim = novoNo;
+            this.ult.prox = this.prim;
             this.quant++;
         }
     }
 
-    anteriorItem(){
+    anteriorItem() {
         this.atual = this.atual.ant
     }
 
@@ -53,22 +66,22 @@ class Ldesc{
         this.atual = this.atual.prox
     }
 
-    verAtual(){
+    verAtual() {
         return this.atual
     }
 
-    verLista(){
+    verLista() {
         var aux = this.prim
-        while(aux!=this.ult){
+        while (aux != this.ult) {
             console.log(aux.info)
             aux = aux.prox
         }
         console.log(this.ult.info)
     }
 
-    verCiclo(){
+    verCiclo() {
         var aux = this.prim
-        while(true){
+        while (true) {
             console.log(aux.info)
             aux = aux.prox
         }
@@ -136,31 +149,79 @@ class ReprodutorMusica {
         this.configurarEventos();
     }
 
+    
+
     configurarEventos() {
         this.listaBotoes.forEach((botao) => {
-            const audioMusica = botao.classList[1];
-            const audioId = `#audio_${audioMusica}`;
+            const audioId = this.fatiarId(botao)
+            this.listaBotoesCircular.inserirFim(botao)
+            console.log(this.listaBotoesCircular)
 
-            botao.onclick = () => this.iniciarReproducao(botao, audioId);
+            botao.onclick = () => this.reproduzirClicada(botao, audioId);
         });
     }
 
-    iniciarReproducao(botao, audioId) {
-        const audio = document.querySelector(audioId);
-        if (this.audioEmReproducao && this.audioEmReproducao !== audio) {
-            this.pararAudio(this.audioEmReproducao);
+
+    fatiarId(botaoaFatiar){
+        const audioMusica = botaoaFatiar.classList[1];
+        const audioId = `#audio_${audioMusica}`;   
+        return (audioId)         
+    }
+
+    reproduzirClicada(botao, audioId) {
+        this.listaBotoesCircular.atual = this.listaBotoesCircular.encontrarPorValor(botao)
+        this.manipularAudio()
+        this.atualizarDadosMusica()
+
+    }
+
+    reproduzirLista() {
+        if (this.listaBotoesCircular.atual == null) {
+            this.listaBotoesCircular.atual = this.listaBotoesCircular.prim
         }
+        this.manipularAudio()
+    }
+    
+    manipularAudio(){
+        const botao = this.listaBotoesCircular.atual.info              
+        const audioId = this.fatiarId(botao)
+        const audio = document.querySelector(audioId);
+        if (audio == null){
+            return null
+        }
+        else{
+            if (this.audioEmReproducao && this.audioEmReproducao !== audio) {
+            this.pararAudio(this.audioEmReproducao);
+            }
+        this.audioEmReproducao.addEventListener('ended', () => {
+            return true
+        });
         this.playPause(audio);
-        this.audioEmReproducao = audio;
+        this.audioEmReproducao = audio
+        }
+    }
 
-        const imagemMusica = botao.querySelector('img');
-        const nomeArtista = document.querySelector('.nome_artista');
-        const nomeMusica = botao.querySelector('.texto_padrao.titulo_musica');
+        
+    avancarMusica(){
+        if(this.listaBotoesCircular.atual == null){
+            return console.log('kkk')
+        }        
+        this.listaBotoesCircular.proximoItem()
+        this.manipularAudio()
+        this.atualizarDadosMusica()
+    }
 
-        this.atualizarDadosMusica(imagemMusica, nomeArtista, nomeMusica);
+    voltarMusica(){
+        if(this.listaBotoesCircular.atual == null){
+            return console.log('kkk')
+        }        
+        this.listaBotoesCircular.proximoItem()
+        this.manipularAudio()         
+
     }
 
     playPause(audio) {
+        console.log(audio.currentTime)
         const playPauseButton = document.querySelector('.play-pause');
         if (audio.paused) {
             audio.play();
@@ -171,26 +232,31 @@ class ReprodutorMusica {
             playPauseButton.classList.remove('fas', 'fa-pause');
             playPauseButton.classList.add('fas', 'fa-play');
         }
+        this.atualizarDadosMusica()
     }
 
+    
     pararAudio(audio) {
         audio.pause();
         audio.currentTime = 0;
     }
 
-    atualizarDadosMusica(imagemMusica, nomeArtista, nomeMusica) {
+    atualizarDadosMusica() {
+        const botao = this.listaBotoesCircular.atual.info
+        const imagemMusica = botao.querySelector('img');
+        const nomeArtista = document.querySelector('.nome_artista');
+        const nomeMusica = botao.querySelector('.texto_padrao.titulo_musica');
         const imagemFooter = document.querySelector('.icone_footer');
         const nomeMusicaFooter = document.querySelector('.nome_musica_footer');
         const nomeArtistaFooter = document.querySelector('.nome_artista_footer');
-
         imagemFooter.src = imagemMusica.src;
         nomeArtistaFooter.innerHTML = nomeArtista.innerHTML;
         nomeMusicaFooter.innerHTML = nomeMusica.innerHTML;
     }
+
+
 }
-
 const reprodutor = new ReprodutorMusica();
-
 
 $(document).ready(function () {
     ajustarPadding();
