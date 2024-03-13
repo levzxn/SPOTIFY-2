@@ -147,6 +147,7 @@ class ReprodutorMusica {
         this.listaBotoes = document.querySelectorAll('.reprodutor');
         this.listaBotoesCircular = new Ldesc();
         this.configurarEventos();
+
     }
 
     
@@ -182,40 +183,43 @@ class ReprodutorMusica {
         this.manipularAudio()
     }
     
-    manipularAudio(){
-        const botao = this.listaBotoesCircular.atual.info              
-        const audioId = this.fatiarId(botao)
+    manipularAudio() {
+        const botao = this.listaBotoesCircular.atual.info;
+        const audioId = this.fatiarId(botao);
         const audio = document.querySelector(audioId);
-        if (audio == null){
-            return null
-        }
-        else{
+        if (audio == null) {
+            return null;
+        } else {
             if (this.audioEmReproducao && this.audioEmReproducao !== audio) {
-            this.pararAudio(this.audioEmReproducao);
-            }
-        this.audioEmReproducao.addEventListener('ended', () => {
-            return true
-        });
-        this.playPause(audio);
-        this.audioEmReproducao = audio
+                this.pararAudio(this.audioEmReproducao);
+            }    
+            const audioAcabou = () => {
+                audio.removeEventListener('ended', audioAcabou);
+                this.avancarMusica();
+                console.log('teste1')
+            };    
+            audio.addEventListener('ended', audioAcabou);
+            console.log('teste2')
+            this.playPause(audio);
+            this.audioEmReproducao = audio;
         }
     }
 
-        
     avancarMusica(){
         if(this.listaBotoesCircular.atual == null){
-            return console.log('kkk')
+            return null
         }        
         this.listaBotoesCircular.proximoItem()
         this.manipularAudio()
         this.atualizarDadosMusica()
+        console.log('teste3')
     }
 
     voltarMusica(){
         if(this.listaBotoesCircular.atual == null){
             return console.log('kkk')
         }        
-        this.listaBotoesCircular.proximoItem()
+        this.listaBotoesCircular.anteriorItem()
         this.manipularAudio()         
 
     }
@@ -227,7 +231,8 @@ class ReprodutorMusica {
             audio.play();
             playPauseButton.classList.remove('fas', 'fa-play');
             playPauseButton.classList.add('fas', 'fa-pause');
-        } else {
+        } 
+        else {
             audio.pause();
             playPauseButton.classList.remove('fas', 'fa-pause');
             playPauseButton.classList.add('fas', 'fa-play');
