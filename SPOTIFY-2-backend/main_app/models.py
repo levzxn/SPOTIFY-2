@@ -43,6 +43,12 @@ class Musica(models.Model):
         return self.titulo_musica
     
     @property
+    def musica_formatada(self):
+        lista_string = self.titulo_musica.lower().split(' ')
+        titulo_formatado = '_'.join(lista_string)
+        return titulo_formatado
+
+    @property
     def duracao_formatada(self):
         segundos = self.duracao.seconds
         horas = segundos // 3600

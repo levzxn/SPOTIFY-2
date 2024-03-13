@@ -12,14 +12,6 @@ body {
     background-color: black;
 }
 
-a{
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 p{
     font-size: 1em;
 }
@@ -51,8 +43,6 @@ li {
     display: flex;
     gap: 15px;
     align-items: flex-end;
-    /* flex-direction: row; */
-    /* justify-self: center; */
     padding-left: 15px;
     margin: 7px;
 }
@@ -183,11 +173,12 @@ li {
     /* text-align: center; */
 }
 
-.imagem.album1 {
+.imagem {
     width: 55px;
     height: 55px;
     border-radius: 5px;
 }
+
 
 .titulo_musica {
     font-size: 18px;
@@ -260,15 +251,9 @@ li {
 
 .imagem_icone_artista {
     width: 150px;
-    /* altura automática para manter a proporção da imagem */
     display: block;
-    /* para remover o espaço extra sob a imagem */
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.imagem_icone_artista.quadrada{
-    border-radius: 0;
 }
 
 .nome_artista {
@@ -317,6 +302,10 @@ li {
     background-color: #1DB954;
 }
 
+.botao_maisOuvidas.play.play svg path{
+    
+}
+
 .botao_maisOuvidas.seguindo {
     width: 100px;
     height: 30px;
@@ -331,7 +320,6 @@ li {
     display: flex;
     padding-bottom: 10px;
     font-size: 30px;
-    color: white;
 }
 
 .menu_maisOuvidas {
@@ -541,7 +529,8 @@ li {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column: 1 / span 2;
-    max-height: fit-content;
+    height: 100%;
+    align-content: space-between;
 }
 
 .container_reproduzindo {
@@ -551,7 +540,8 @@ li {
 .container_imagem.footer {
     justify-content: center;
     display: flex;
-    margin-right: 5px;
+    margin-right: 10px;
+    margin-left: 15px;
 
 }
 
@@ -571,7 +561,7 @@ li {
 }
 
 .like_container{
-    padding-left: 20px;
+    padding-left: 30px;
 }
 .botoes-controle {
     display: flex;
@@ -581,10 +571,6 @@ li {
     flex-wrap: wrap;
 }
 
-.botao_like{
-    width: 30px;
-    background-color: transparent;
-}
 
 .play-pause {
     display: inline-block;
@@ -640,4 +626,5 @@ li {
     }
 }
 
-.footer{}
+
+
