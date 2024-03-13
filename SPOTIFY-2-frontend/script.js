@@ -6,7 +6,7 @@ class No {
     }
 }
 
-class Ldesc {
+class Ldes {
     constructor() {
         this.prim = null
         this.atual = null
@@ -30,14 +30,11 @@ class Ldesc {
     inserirFim(valor) {
         if (this.quant === 0) {
             this.prim = this.ult = new No(null, valor, null);
-            this.prim.prox = this.prim;
-            this.prim.ant = this.prim;
             this.quant++;
         } else {
-            let novoNo = new No(this.ult, valor, this.prim);
+            let novoNo = new No(this.ult, valor, null);
             this.ult.prox = novoNo;
             this.ult = novoNo;
-            this.prim.ant = this.ult;
             this.quant++;
         }
     }
@@ -45,15 +42,11 @@ class Ldesc {
     inserirInicio(valor) {
         if (this.quant === 0) {
             this.prim = this.ult = new No(null, valor, null);
-            this.prim.prox = this.prim;
-            this.prim.ant = this.prim;
             this.quant++;
         } else {
-            let novoNo = new No(this.ult, valor, this.prim);
+            let novoNo = new No(null, valor, this.prim);
             this.prim.ant = novoNo;
-            novoNo.prox = this.prim;
             this.prim = novoNo;
-            this.ult.prox = this.prim;
             this.quant++;
         }
     }
@@ -145,7 +138,7 @@ class ReprodutorMusica {
     constructor() {
         this.audioEmReproducao = null;
         this.listaBotoes = document.querySelectorAll('.reprodutor');
-        this.listaBotoesCircular = new Ldesc();
+        this.listaBotoesCircular = new Ldes();
         this.configurarEventos();
 
     }
@@ -206,18 +199,22 @@ class ReprodutorMusica {
     }
 
     avancarMusica(){
-        if(this.listaBotoesCircular.atual == null){
-            return null
+        if(this.listaBotoesCircular.atual == null || this.listaBotoesCircular.atual.prox == null){
+            this.pararAudio(this.audioEmReproducao)
+            this.playPause(this.audioEmReproducao)
+            return 
         }        
-        this.listaBotoesCircular.proximoItem()
-        this.manipularAudio()
-        this.atualizarDadosMusica()
-        console.log('teste3')
+            this.listaBotoesCircular.proximoItem()
+            this.manipularAudio()
+            this.atualizarDadosMusica()
+            console.log('teste3')
     }
 
     voltarMusica(){
-        if(this.listaBotoesCircular.atual == null){
-            return console.log('kkk')
+        if(this.listaBotoesCircular.atual == null || this.listaBotoesCircular.atual.ant == null){
+            this.pararAudio(this.audioEmReproducao)
+            this.playPause(this.audioEmReproducao)
+            return
         }        
         this.listaBotoesCircular.anteriorItem()
         this.manipularAudio()         
