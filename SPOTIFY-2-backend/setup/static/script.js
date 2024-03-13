@@ -198,6 +198,15 @@ class ReprodutorMusica {
         }
     }
 
+    recomecarMusica(){
+        if(this.audioEmReproducao != null){
+            this.audioEmReproducao.currentTime = 0
+        }
+        else{
+            return
+        }
+    }
+
     avancarMusica(){
         if(this.listaBotoesCircular.atual == null || this.listaBotoesCircular.atual.prox == null){
             this.pararAudio(this.audioEmReproducao)
