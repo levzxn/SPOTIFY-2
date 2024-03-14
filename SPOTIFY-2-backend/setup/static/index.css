@@ -618,6 +618,20 @@ li {
     background-color: #1DB954;
 }
 
+.ver_mais{
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 45px;
+    font-size: 1em;
+    max-width: fit-content;
+}
+
+.ver_mais:hover{
+    text-decoration: underline;
+}
+
 @media (min-width:940px) {
     .menu_central_recentes {
         grid-template-columns: 1fr 1fr 1fr 1fr;

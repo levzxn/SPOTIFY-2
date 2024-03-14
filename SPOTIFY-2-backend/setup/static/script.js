@@ -134,6 +134,46 @@ function ajustarFonte() {
 
 
 }
+
+function carregarLis() {
+    const listaLi = document.querySelectorAll('.musicas_maisOuvidas');
+    for (let i = 0; i < listaLi.length; i++) {
+        if (i >= 3) {
+            listaLi[i].style.display = 'none';
+        }
+    }
+}
+
+let mostrandoTodos = false
+function mostrarTodos() {
+    const botao = document.querySelector('.ver_mais')
+    const listaLi = document.querySelectorAll('.musicas_maisOuvidas');
+    if (mostrandoTodos) {
+        for (let i = 0; i < listaLi.length; i++) {
+            if (i >= 3) {
+                listaLi[i].style.display = 'none';
+            }
+        }
+        botao.innerHTML = 'Ver mais'
+        mostrandoTodos = false;
+    } 
+    else {
+        for (let i = 0; i < listaLi.length; i++) {
+            listaLi[i].style.display = 'flex';
+        }
+        botao.innerHTML = 'Ver menos'
+        mostrandoTodos = true;
+    }
+}
+
+function enumerarMusicas(){
+    const listaLi = document.querySelectorAll('.musicas_maisOuvidas');
+    const paragrafo = document.querySelectorAll('.numero_padrao')
+    for (let i = 0; i < listaLi.length; i++) {
+        paragrafo[i].innerHTML = i+1
+    }
+}
+
 class ReprodutorMusica {
     constructor() {
         this.audioEmReproducao = null;
@@ -281,6 +321,8 @@ const reprodutor = new ReprodutorMusica();
 $(document).ready(function () {
     ajustarPadding();
     ajustarFonte();
+    carregarLis();
+    enumerarMusicas();
 
     $(window).resize(function () {
         ajustarPadding();
