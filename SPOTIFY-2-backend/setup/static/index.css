@@ -533,6 +533,10 @@ li {
     align-content: space-between;
 }
 
+.hidden{
+    display: none;
+}
+
 .container_reproduzindo {
     display: flex
 }

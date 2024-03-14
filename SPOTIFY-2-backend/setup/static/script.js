@@ -253,6 +253,7 @@ class ReprodutorMusica {
     }
 
     atualizarDadosMusica() {
+        this.mostrarFooter()
         const botao = this.listaBotoesCircular.atual.info
         const imagemMusica = botao.querySelector('img');
         const nomeArtista = document.querySelector('.nome_artista');
@@ -260,11 +261,19 @@ class ReprodutorMusica {
         const imagemFooter = document.querySelector('.icone_footer');
         const nomeMusicaFooter = document.querySelector('.nome_musica_footer');
         const nomeArtistaFooter = document.querySelector('.nome_artista_footer');
-        imagemFooter.src = imagemMusica.src;
+        if(imagemMusica==null){
+            imagemFooter.src = document.querySelector('.imagem_icone_artista').src
+        }
+        else{
+            imagemFooter.src = imagemMusica.src;
+        }
         nomeArtistaFooter.innerHTML = nomeArtista.innerHTML;
         nomeMusicaFooter.innerHTML = nomeMusica.innerHTML;
     }
 
+    mostrarFooter(){
+        $('.footer').removeClass('hidden');
+    }
 
 }
 const reprodutor = new ReprodutorMusica();
