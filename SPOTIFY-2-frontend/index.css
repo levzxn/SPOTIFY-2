@@ -303,7 +303,7 @@ li {
 }
 
 .botao_maisOuvidas.play.play svg path{
-    
+
 }
 
 .botao_maisOuvidas.seguindo {
@@ -372,11 +372,12 @@ li {
     gap: 100px;
     max-width: 100px;
 }
-
 .texto_padrao {
     min-width: 150px;
     color: white;
+    display: flex;
 }
+
 
 .texto_padrao.duracao {
     min-width: fit-content;
@@ -612,6 +613,19 @@ li {
 
 .progresso:hover{
     background-color: #1DB954;
+}
+.ver_mais{
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 45px;
+    font-size: 1em;
+    max-width: fit-content;
+}
+
+.ver_mais:hover{
+    text-decoration: underline;
 }
 
 @media (min-width:940px) {
