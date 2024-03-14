@@ -20,5 +20,6 @@ def artista(request,nome_art):
 def album(request,nome_alb):
     album = get_object_or_404(Album,titulo_album=nome_alb)
     musicas = Musica.objects.filter(album=album)
-    dados = {'album':album,'musicas':musicas}
+    albuns_artista = Album.objects.filter(artista=album.artista)
+    dados = {'album':album,'musicas':musicas,'albuns':albuns_artista}
     return render(request,'album.html',{'dados':dados})

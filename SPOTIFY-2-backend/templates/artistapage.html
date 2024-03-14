@@ -27,6 +27,14 @@
         </div>
     </div>
     <div class="menu_maisOuvidas">
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            carregarLis();
+        });
+
+        </script>
+
         {%include 'partials/_menu_botoes.html'%}
         <div class="menu_central_espacamento">
             <h2 class="titulo_maisOuvidas">Mais Ouvidas</h2>
@@ -35,7 +43,7 @@
                     {%for musica in dados.musicas%}
                     <button class="reprodutor {{musica.musica_formatada}}" style="background-color: transparent; width: 100%;">
                         <li class="musicas_maisOuvidas">
-                            <p class="numero_padrao">1</p>
+                            <p class="numero_padrao"></p>
                             <div class="foto_titulo">
                                 <img class="imagem album1" src="/media/{{musica.album.foto_album}}" alt="capa"
                                     width="20px" height="20px">

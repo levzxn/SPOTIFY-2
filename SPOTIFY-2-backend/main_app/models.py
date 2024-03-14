@@ -54,12 +54,13 @@ class Musica(models.Model):
         horas = segundos // 3600
         minutos = (segundos % 3600) // 60
         segundos_restantes = segundos % 60
-        segundos_f = round(segundos_restantes,2)
 
         if horas > 0:
-            return f'{horas}:{minutos}:{segundos_f}'
+            return f'{horas:02d}:{minutos:02d}:{segundos_restantes:02d}'
+        elif minutos > 0:
+            return f'{minutos:02d}:{segundos_restantes:02d}'
         else:
-            return f'{minutos}:{segundos_restantes}'
+            return f'{segundos_restantes:02d}'
         
     @property
     def visualizacoes_formatadas(self):

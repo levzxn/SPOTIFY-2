@@ -321,7 +321,6 @@ const reprodutor = new ReprodutorMusica();
 $(document).ready(function () {
     ajustarPadding();
     ajustarFonte();
-    carregarLis();
     enumerarMusicas();
 
     $(window).resize(function () {
