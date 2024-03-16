@@ -1,0 +1,12 @@
+{
+    "musicas": [
+      {
+        "id": "flashing_lights",
+        "titulo": "Flashing Lights",
+        "visualizacoes": "999.999.999",
+        "url": "http://127.0.0.1:5501/SPOTIFY-2-frontend/media/testeaudio.mp3",
+        "capaAlbum": "http://127.0.0.1:5501/SPOTIFY-2-frontend/imagens/derek-capa1.jpeg",
+        "duracao": "4:20"
+      }    
+    ]
+  }
