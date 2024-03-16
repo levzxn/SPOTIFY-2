@@ -53,19 +53,7 @@
             <div class="container_h2_albuns">
                 <h2 class="texto_padrao nome_container">Mais de {{dados.album.artista.nome_artista}}</h2>
             </div>
-            <div class="albuns">
-                {%for album in dados.albuns%}
-                <a href="{%url 'album' album.titulo_album%}">
-                    <div class="album">
-                        <div class="container_conteudo">
-                            <img class="icone_album" src="/media/{{album.foto_album}}">
-                        </div>
-                        <h1 class="texto_padrao titulo_album">{{album.titulo_album}}</h1>
-                        <p class="texto_padrao ano_lancamento">{{album.ano_lancamento}}</p>
-                    </div>
-                </a>
-                {%endfor%}
-            </div>
+            {%include 'partials/_albuns_artista.html'%}
         </div>
 
         {%for musica in dados.musicas%}

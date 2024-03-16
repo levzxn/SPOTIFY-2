@@ -1,4 +1,6 @@
 {%load static%}
+{% load custom_filters %}
+
 
 <section class="menu_lateral">
     <div class="container_lateral container1">
@@ -77,17 +79,36 @@
         </div>
         <div class="sugestoes container_lateral">
             <ul class="lista_lateral lista2">
-                {%for musica in menu_lateral.musicas%}
-                <li class="musica">
-                    <div class="container_musica musica1">
-                        <a href="teste.com"></a>
-                        <img class="imagem album1" src="/media/{{musica.album.foto_album}}" alt="capa" width="20px"
-                            height="20px">
-                        <div class="container_infos_musica">
-                            <p class="titulo_musica">{{musica.titulo_musica}}</p>
-                            <p class="descricao_musica">Álbum • {{musica.album.artista}}</p>
-                        </div>
-                </li>
+                {%for model in menu_lateral.models%}
+                    {%if model|isinstanceof:'Musica' %}
+                    <li class="musica">
+                        <div class="container_musica musica1">
+                            <img class="imagem album1" src="/media/{{model.album.foto_album}}" alt="capa" width="20px"
+                                height="20px">
+                            <div class="container_infos_musica">
+                                <p class="titulo_musica">{{model.titulo_musica}}</p>
+                                <a href="{%url 'artista' model.album.artistac.nome_artista%}"><p class="descricao_musica">{{model.album.artista.nome_artista}}</p></a>
+                            </div>
+                    </li>
+                    {% elif model|isinstanceof:'Album'%}
+                    <li class="musica">
+                        <div class="container_musica musica1">
+                            <img class="imagem album1" src="/media/{{model.foto_album}}" alt="capa" width="20px" height="20px">
+                            <div class="container_infos_musica">
+                               <a href="{%url 'album' model.titulo_album%}"><p class="titulo_musica">{{model.titulo_album}}</p></a> 
+                               <a href="{%url 'artista' model.artista.nome_artista%}"><p class="descricao_musica">{{model.artista.nome_artista}}</p></a>
+                            </div>
+                    </li>
+                    {%elif model|isinstanceof:'Artista'%}
+                    <li class="musica">
+                        <div class="container_musica musica1">
+                            <img class="imagem album1" src="/media/{{model.icone_artista}}" alt="capa" width="20px" style="border-radius:50%;"
+                                height="20px">
+                            <div class="container_infos_musica">
+                                <a href="{%url 'artista' model.nome_artista%}"><p class="titulo_musica">{{model.nome_artista}}</p></a>
+                            </div>
+                    </li>
+                    {%endif%}
                 {%endfor%}
             </ul>
         </div>

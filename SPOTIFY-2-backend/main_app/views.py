@@ -23,3 +23,4 @@ def album(request,nome_alb):
     albuns_artista = Album.objects.filter(artista=album.artista)
     dados = {'album':album,'musicas':musicas,'albuns':albuns_artista}
     return render(request,'album.html',{'dados':dados})
+
